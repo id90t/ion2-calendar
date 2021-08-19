@@ -4,7 +4,6 @@
 platforms/
 plugins/
 resources/
-node_modules/
 */www/
 package-lock.json
 yarn.lock
