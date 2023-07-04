@@ -93,9 +93,9 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
   `,
 })
 export class CalendarModal implements OnInit, AfterViewInit {
-  @ViewChild(IonContent)
+  @ViewChild(IonContent, { static: true })
   content: IonContent;
-  @ViewChild('months')
+  @ViewChild('months', { static: true })
   monthsEle: ElementRef;
 
   @HostBinding('class.ion-page')

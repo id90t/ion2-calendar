@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarModal = void 0;
 var core_1 = require("@angular/core");
 var angular_1 = require("@ionic/angular");
 var calendar_service_1 = require("../services/calendar.service");
@@ -232,11 +233,11 @@ var CalendarModal = /** @class */ (function () {
         return momentDate.original ? momentDate.original.time : index;
     };
     __decorate([
-        core_1.ViewChild(angular_1.IonContent),
+        core_1.ViewChild(angular_1.IonContent, { static: true }),
         __metadata("design:type", angular_1.IonContent)
     ], CalendarModal.prototype, "content", void 0);
     __decorate([
-        core_1.ViewChild('months'),
+        core_1.ViewChild('months', { static: true }),
         __metadata("design:type", core_1.ElementRef)
     ], CalendarModal.prototype, "monthsEle", void 0);
     __decorate([
@@ -250,8 +251,8 @@ var CalendarModal = /** @class */ (function () {
     CalendarModal = __decorate([
         core_1.Component({
             selector: 'ion-calendar-modal',
+            styleUrls: ['./calendar.modal.scss'],
             template: "\n    <ion-header>\n      <ion-toolbar>\n          <ion-buttons slot=\"secondary\">\n              <ion-button type='button' slot=\"icon-only\" fill=\"clear\" class=\"primary\" (click)=\"onCancel()\">\n              <span *ngIf=\"_d.closeLabel !== '' && !_d.closeIcon\">{{ _d.closeLabel }}</span>\n              <ion-icon *ngIf=\"_d.closeIcon\" name=\"close\"></ion-icon>\n            </ion-button>\n          </ion-buttons>\n\n          <ion-title>{{ _d.title }}</ion-title>\n      </ion-toolbar>\n\n      <ng-content select=\"[sub-header]\"></ng-content>\n\n      <ion-row *ngIf=\"_d.pickMode === 'range'\" lines=\"none\" [class]=\"'dates-toolbar'\" no-border>\n        <ion-col size=\"4\" class=\"start-date ion-text-nowrap\">\n          {{ _getDayFormatted(datesTemp[0]) || 'Start Date' }}\n        </ion-col>\n        <ion-col size=\"4\" class=\"ion-text-center\">\n          <ion-icon name=\"arrow-forward-outline\"></ion-icon>\n        </ion-col>\n        <ion-col size=\"4\" class=\"end-date ion-text-right ion-text-nowrap\">\n          {{ _getDayFormatted(datesTemp[1]) || 'End Date' }}\n        </ion-col>\n      </ion-row>\n\n      <ion-calendar-week\n        [color]=\"_d.color\"\n        [weekArray]=\"_d.weekdays\"\n        [weekStart]=\"_d.weekStart\">\n      </ion-calendar-week>\n\n    </ion-header>\n\n    <ion-content (ionScroll)=\"onScroll($event)\" class=\"calendar-page\" [scrollEvents]=\"true\"\n                 [ngClass]=\"{'multi-selection': _d.pickMode === 'multi'}\">\n\n      <div #months>\n        <ng-template ngFor let-month [ngForOf]=\"calendarMonths\" [ngForTrackBy]=\"trackByIndex\" let-i=\"index\">\n          <div class=\"month-box\" [attr.id]=\"'month-' + i\">\n            <h4 class=\"month-title\">{{ _monthFormat(month.original.date) }}</h4>\n            <ion-calendar-month [month]=\"month\"\n                                [pickMode]=\"_d.pickMode\"\n                                [isSaveHistory]=\"_d.isSaveHistory\"\n                                [id]=\"_d.id\"\n                                [color]=\"_d.color\"\n                                [maxMultiDates]=\"_d.maxMultiDates\"\n                                (change)=\"onChange($event)\"\n                                [(ngModel)]=\"datesTemp\">\n            </ion-calendar-month>\n          </div>\n        </ng-template>\n\n      </div>\n\n      <ion-infinite-scroll threshold=\"25%\" (ionInfinite)=\"nextMonth($event)\">\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n      </ion-infinite-scroll>\n\n    </ion-content>\n\n    <ion-footer>\n\n        <ion-button expand=\"full\" *ngIf=\"!_d.autoDone\" [disabled]=\"!canDone()\" (click)=\"done()\">\n          <span *ngIf=\"_d.doneLabel !== '' && !_d.doneIcon\">{{ _d.doneLabel }}</span>\n          <ion-icon *ngIf=\"_d.doneIcon\" name=\"checkmark\"></ion-icon>\n        </ion-button>\n\n    </ion-footer>\n  ",
-            styles: [":host ion-select {\n  max-width: unset; }\n  :host ion-select .select-icon > .select-icon-inner,\n  :host ion-select .select-text {\n    color: #fff !important; }\n  :host ion-select.select-ios {\n    max-width: unset; }\n\n:host ion-toolbar ion-button.md {\n  color: var(--ion-color-primary); }\n\n:host .dates-toolbar {\n  --background: transparent;\n  padding: 0 1rem; }\n  :host .dates-toolbar.primary {\n    --background: var(--ion-color-primary); }\n  :host .dates-toolbar.secondary {\n    --background: var(--ion-color-secondary); }\n  :host .dates-toolbar.danger {\n    --background: var(--ion-color-danger); }\n  :host .dates-toolbar.dark {\n    --background: var(--ion-color-dark); }\n  :host .dates-toolbar.light {\n    --background: var(--ion-color-light); }\n  :host .dates-toolbar.transparent {\n    --background: transparent; }\n  :host .dates-toolbar.toolbar-md {\n    min-height: 44px; }\n\n:host .ios.dates-toolbar {\n  padding-top: 1rem; }\n\n:host .start-date {\n  padding-left: 0.5rem; }\n\n:host .end-date {\n  margin-right: -0.5rem; }\n\n:host .calendar-page {\n  background-color: #fbfbfb; }\n\n:host .month-box {\n  display: inline-block;\n  width: 100%;\n  padding-bottom: 1em; }\n\n:host #month-0 {\n  padding-top: 1rem; }\n\n:host .month-title {\n  padding-left: 1rem;\n  text-align: left;\n  color: #363749; }\n\n:host h4 {\n  font-weight: 400;\n  font-size: 1.1rem;\n  display: block;\n  text-align: center;\n  margin: 1rem 0 0;\n  color: #929292; }\n\nbody[data-dark-mode=\"true\"] :host .month-title {\n  color: white; }\n\nbody[data-dark-mode=\"true\"] :host .dates-toolbar {\n  color: white; }\n"]
         }),
         __metadata("design:paramtypes", [core_1.Renderer2,
             core_1.ElementRef,
