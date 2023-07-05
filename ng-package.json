@@ -1,7 +1,11 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "./dist/ion-calendar",
   "lib": {
-    "entryFile": "public_api.ts"
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "moment": "moment"    
+    }
   },
-  "whitelistedNonPeerDependencies": ["."] 
+  "allowedNonPeerDependencies": ["."]
 }
