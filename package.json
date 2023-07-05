@@ -1,79 +1,44 @@
 {
-  "name": "ion2-calendar",
-  "version": "3.4.2",
-  "description": "A date picker component for ionic2 ",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "name": "my-workspace",
+  "version": "0.0.0",
   "scripts": {
-    "start": "cd ./dev && npm start",
-    "clean:dist": "rm -rf dist",
-    "demo:link": "npm link && cd ./demo && npm link ion2-calendar",
-    "demo:serve": "cd ./demo && ionic serve",
-    "build": "run-s clean:dist build:copy-sources build:compile-scss build:ts",
-    "build:ts": "tsc && ngcc",
-    "build:copy-sources": "gulp copy-sources",
-    "build:compile-scss": "gulp copy-scss && gulp rename-scss && gulp clean-scss",
-    "test": "echo \"Error: no test specified\"",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "packagr": "ng-packagr -p package.json",
-    "remove:prepare": "npm run build",
-    "remove:install": "npm run build"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "rm -rf dist && ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "postinstall": "ngcc"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/HsuanXyz/ion2-calendar.git"
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~12.2.0",
+    "@angular/common": "~12.2.0",
+    "@angular/compiler": "~12.2.0",
+    "@angular/core": "~12.2.0",
+    "@angular/forms": "~12.2.0",
+    "@angular/platform-browser": "~12.2.0",
+    "@angular/platform-browser-dynamic": "~12.2.0",
+    "@angular/router": "~12.2.0",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4",
+    "@ionic/angular": "^6.7.5",
+    "moment": "2.24.0",
+    "ionicons": "4.5.1"
   },
   "devDependencies": {
-    "@angular/common": "~12.2.17",
-    "@angular/compiler": "~12.2.17",
-    "@angular/compiler-cli": "~12.2.17",
-    "@angular/core": "~12.2.17",
-    "@angular/forms": "~12.2.17",
-    "@angular/platform-browser": "~12.2.17",
-    "@angular/platform-browser-dynamic": "~12.2.17",
-    "@angular/router": "~12.2.17",
-    "@ionic/angular": "^6.7.5",
-    "gulp": "^4.0.2",
-    "gulp-bump": "^3.2.0",
-    "gulp-clean": "^0.4.0",
-    "gulp-ext-replace": "^0.3.0",
-    "gulp-sass": "^5.1.0",
-    "ionicons": "4.5.1",
-    "moment": "2.24.0",
-    "ng-packagr": "12.2.2",
-    "npm-run-all": "^4.1.2",
-    "rxjs": "~6.6.0",
-    "tsickle": "^0.41.0",
-    "tslint": "~5.7.0",
-    "tslint-eslint-rules": "^4.1.1",
-    "typescript": "4.3.5",
-    "zone.js": "~0.11.4"
-  },
-  "keywords": [
-    "ionic2",
-    "calendar",
-    "Datepicker",
-    "date-range"
-  ],
-  "author": "HsuanLee",
-  "license": "MIT",
-  "peerDependencies": {
-    "moment": "^2.19.3"
-  },
-  "$schema": "./node_modules/ng-packagr/package.schema.json",
-  "ngPackage": {
-    "lib": {
-      "entryFile": "src/index.ts",
-      "styleIncludePaths": [
-        ""
-      ],
-      "umdModuleIds": {
-        "moment": "moment"
-      }
-    }
-  },
-  "dependencies": {
-    "@angular/cli": "^8.3.29",
-    "@types/node": "11.15.20" 
-    }
+    "@angular-devkit/build-angular": "~12.2.18",
+    "@angular/cli": "~12.2.18",
+    "@angular/compiler-cli": "~12.2.0",
+    "@types/jasmine": "~3.8.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~3.8.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-packagr": "^12.1.1",
+    "typescript": "4.3.5"
+  }
 }
