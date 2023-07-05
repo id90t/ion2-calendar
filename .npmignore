@@ -1,0 +1,4 @@
+
+/dist/*
+/src/*
+!/dist/ion-calendar/**
