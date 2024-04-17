@@ -26,6 +26,7 @@ export interface CalendarDay {
   };
   isFirst?: boolean;
   isLast?: boolean;
+  demandLevel?: 'Low' | 'High' | 'Medium';
 }
 
 export class CalendarMonth {
@@ -40,6 +41,7 @@ export interface DayConfig {
   title?: string;
   subTitle?: string;
   cssClass?: string;
+  demandLevel?: 'Low' | 'High' | 'Medium';
 }
 
 export interface ModalOptions {
