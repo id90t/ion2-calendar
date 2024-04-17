@@ -76,3 +76,19 @@ body[data-dark-mode=true] :host .month-title {
 body[data-dark-mode=true] :host .dates-toolbar {
   color: white;
 }
+.calendar-demand-indicator-container {
+  justify-content: center;
+}
+.calendar-demand-indicator {
+  padding: 0.25rem;
+  margin: auto 0.25rem;
+}
+.calendar-demand-indicator-cheaper {
+  background-color: #2dd36f;
+}
+.calendar-demand-indicator-average {
+  background-color: #f2b01e;
+}
+.calendar-demand-indicator-higher {
+  background-color: #f53d3d;
+}

@@ -3,4 +3,5 @@ import { CalendarWeekComponent } from "./calendar-week.component";
 import { MonthComponent } from "./month.component";
 import { CalendarComponent } from "./calendar.component";
 import { MonthPickerComponent } from "./month-picker.component";
-export declare const CALENDAR_COMPONENTS: (typeof CalendarModal | typeof CalendarWeekComponent | typeof MonthComponent | typeof CalendarComponent | typeof MonthPickerComponent)[];
+import { CalendarDemandModal } from "./calendar-demand.component";
+export declare const CALENDAR_COMPONENTS: (typeof CalendarModal | typeof CalendarWeekComponent | typeof MonthComponent | typeof CalendarComponent | typeof MonthPickerComponent | typeof CalendarDemandModal)[];
