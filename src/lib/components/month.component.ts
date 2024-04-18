@@ -62,6 +62,14 @@ export const MONTH_VALUE_ACCESSOR: any = {
                         [disabled]="day.disable">
                   <p>{{ day.title }}</p>
                   <small *ngIf="day.subTitle">{{ day?.subTitle }}</small>
+                  <small *ngIf="day.demandLevel" class="day-dot-container">
+                    <div class="day-dot" [ngClass]="{
+                      'day-low': day.demandLevel === 'Low',
+                      'day-medium': day.demandLevel === 'Medium',
+                      'day-high': day.demandLevel === 'High'
+                    }">
+                    </div>
+                  </small>
                 </button>
               </ng-container>
 
@@ -108,7 +116,7 @@ export class MonthComponent implements ControlValueAccessor, AfterViewInit {
     return this.pickMode === pickModes.RANGE;
   }
 
-  constructor(public ref: ChangeDetectorRef) {}
+  constructor(public ref: ChangeDetectorRef) { }
 
   ngAfterViewInit(): void {
     this._isInit = true;
@@ -178,13 +186,7 @@ export class MonthComponent implements ControlValueAccessor, AfterViewInit {
   isSelected(time: number): any {
     if (Array.isArray(this._date)) {
       if (this.pickMode !== pickModes.MULTI) {
-        if (this._date[0] !== null) {
-          return time === this._date[0].time;
-        }
-
-        if (this._date[1] !== null) {
-          return time === this._date[1].time;
-        }
+        return (this._date[0] && time === this._date[0].time) || (this._date[1] && time === this._date[1].time);
       } else {
         return this._date.findIndex(e => e !== null && e.time === time) !== -1;
       }
@@ -218,13 +220,13 @@ export class MonthComponent implements ControlValueAccessor, AfterViewInit {
           this._date[0] = item;
           this.selectStart.emit(item);
         }
-      // Ensure if the user has selected a date range, when a user interacts with another date on the calendar the range will reset.
-      // } else if (this._date[0].time > item.time) {
-      //   this._date[0] = item;
-      //   this.selectStart.emit(item);
-      // } else if (this._date[1].time < item.time) {
-      //   this._date[1] = item;
-      //   this.selectEnd.emit(item);
+        // Ensure if the user has selected a date range, when a user interacts with another date on the calendar the range will reset.
+        // } else if (this._date[0].time > item.time) {
+        //   this._date[0] = item;
+        //   this.selectStart.emit(item);
+        // } else if (this._date[1].time < item.time) {
+        //   this._date[1] = item;
+        //   this.selectEnd.emit(item);
       } else {
         this._date[0] = item;
         this.selectStart.emit(item);

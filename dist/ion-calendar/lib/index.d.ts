@@ -7,3 +7,5 @@ export { CalendarComponent } from './components/calendar.component';
 export { CalendarModule } from './calendar.module';
 export { CalendarController } from './calendar.controller';
 export { MonthPickerComponent } from './components/month-picker.component';
+export { CalendarDemandModal } from './components/calendar-demand.component';
+export { CalendarService } from './services/calendar.service';

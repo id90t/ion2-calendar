@@ -111,7 +111,7 @@ export class CalendarService {
   }
 
   findDayConfig(day: any, opt: any): any {
-    if (!opt.daysConfig &&  opt.daysConfig.length <= 0) return null;
+    if (!opt.daysConfig && opt.daysConfig.length <= 0) return null;
     return opt.daysConfig.find((n: { date: any; }) => day.isSame(n.date, 'day'));
   }
 
@@ -170,6 +170,7 @@ export class CalendarService {
       isNextMonth: date.month() > (month ? month : 0),
       marked: dayConfig ? dayConfig.marked || false : false,
       cssClass: dayConfig ? dayConfig.cssClass || '' : '',
+      demandLevel: dayConfig ? dayConfig.demandLevel : '',
       disable: _disable,
       isFirst: date.date() === 1,
       isLast: date.date() === date.daysInMonth(),
