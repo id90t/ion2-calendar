@@ -18,9 +18,7 @@ export class CalendarWeekComponent {
   _weekStart = 0;
   @Input()
   color: string | undefined = defaults.COLOR;
-
   constructor() {}
-
   @Input()
   set weekArray(value: string[] | undefined) {
     if (value && value.length === 7) {

@@ -78,17 +78,30 @@ body[data-dark-mode=true] :host .dates-toolbar {
 }
 .calendar-demand-indicator-container {
   justify-content: center;
+  background-color: var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7));
 }
 .calendar-demand-indicator {
   padding: 0.25rem;
   margin: auto 0.25rem;
+  border-radius: 5px;
 }
 .calendar-demand-indicator-cheaper {
-  background-color: #2dd36f;
+  background-color: #6CD395;
 }
 .calendar-demand-indicator-average {
-  background-color: #f2b01e;
+  background-color: #F2C666;
 }
 .calendar-demand-indicator-higher {
-  background-color: #f53d3d;
+  background-color: #F58787;
+}
+.loading-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-indicator {
+  width: 5rem;
+  height: 5rem;
 }

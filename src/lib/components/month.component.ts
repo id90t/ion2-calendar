@@ -59,7 +59,7 @@ export const MONTH_VALUE_ACCESSOR: any = {
                         [class.is-first]="day.isFirst"
                         [class.is-last]="day.isLast"
                         [class.on-selected]="isSelected(day.time)"
-                        [disabled]="day.disable">
+                        [disabled]="day.disable">               
                   <p>{{ day.title }}</p>
                   <small *ngIf="day.subTitle">{{ day?.subTitle }}</small>
                   <small *ngIf="day.demandLevel" class="day-dot-container">

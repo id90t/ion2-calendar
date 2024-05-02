@@ -17,6 +17,10 @@ export declare class CalendarDemandModal implements OnInit, AfterViewInit {
     demandCalendarService: DemandCalendarService | null;
     latitude: string;
     longitude: string;
+    cheaperText: string;
+    averageText: string;
+    higherText: string;
+    loading: boolean;
     datesTemp: Array<CalendarDay> | any;
     calendarMonths: Array<CalendarMonth> | any;
     step: number | any;
@@ -45,17 +49,12 @@ export declare class CalendarDemandModal implements OnInit, AfterViewInit {
     scrollToDate(date: Date): void;
     scrollToDefaultDate(): void;
     onScroll($event: any): void;
-    /**
-     * In some older Safari versions (observed at Mac's Safari 10.0), there is an issue where style updates to
-     * shadowRoot descendants don't cause a browser repaint.
-     * See for more details: https://github.com/Polymer/polymer/issues/4701
-     */
     repaintDOM(): any;
     findInitMonthNumber(date: Date): number;
-    _getDayTime(date: any): number;
-    _monthFormat(date: any): string;
-    _getDayFormatted(data: any): string | null;
+    getDayTime(date: any): number;
+    monthFormat(date: any): string;
+    getDayFormatted(data: any): string | null;
     trackByIndex(index: number, momentDate: CalendarMonth): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<CalendarDemandModal, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CalendarDemandModal, "ion-calendar-demand-modal", never, { "options": "options"; "demandCalendarService": "demandCalendarService"; "latitude": "latitude"; "longitude": "longitude"; }, {}, never, ["[sub-header]"], false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CalendarDemandModal, "ion-calendar-demand-modal", never, { "options": "options"; "demandCalendarService": "demandCalendarService"; "latitude": "latitude"; "longitude": "longitude"; "cheaperText": "cheaperText"; "averageText": "averageText"; "higherText": "higherText"; }, {}, never, ["[sub-header]"], false>;
 }

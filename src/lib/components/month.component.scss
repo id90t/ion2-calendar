@@ -13,7 +13,7 @@
   width: 14%;
   float: left;
   text-align: center;
-  height: 36px;
+  height: 44px;
   margin-bottom: 5px;
 }
 :host .days .marked p {
@@ -26,12 +26,12 @@
   font-size: 1.3em;
 }
 :host button.days-btn {
-  border-radius: 36px;
-  width: 36px;
+  border-radius: 44px;
+  width: 44px;
   display: block;
   margin: 0 auto;
   padding: 0;
-  height: 36px;
+  height: 44px;
   background-color: transparent;
   position: relative;
   z-index: 2;
@@ -80,11 +80,17 @@
   background-color: var(--ion-color-primary);
   color: #fff;
 }
+
+:host .primary .endSelection button.days-btn {
+  background-color: var(--ion-color-primary);
+  color: #fff;
+}
+
 :host .primary .startSelection {
   position: relative;
 }
 :host .primary .startSelection:before, :host .primary .startSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -93,7 +99,7 @@
   display: block;
 }
 :host .primary .startSelection:before {
-  background-color: var(--ion-color-primary);
+  background-color: rgba(96, 120, 238, 0.2);
 }
 :host .primary .startSelection:after {
   background-color: white;
@@ -103,7 +109,7 @@
   position: relative;
 }
 :host .primary .endSelection:before, :host .primary .endSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -112,7 +118,7 @@
   display: block;
 }
 :host .primary .endSelection:before {
-  background-color: var(--ion-color-primary);
+  background-color: rgba(96, 120, 238, 0.2);
 }
 :host .primary .endSelection:after {
   background-color: white;
@@ -126,13 +132,13 @@
   border-bottom-right-radius: 0;
 }
 :host .primary .between button.days-btn {
-  background-color: var(--ion-color-primary);
+  background-color: rgba(96, 120, 238, 0.2);
   width: 100%;
   border-radius: 0;
   position: relative;
 }
 :host .primary .between button.days-btn:after {
-  height: 36px;
+  height: 44px;
   width: 100%;
   content: "";
   position: absolute;
@@ -144,7 +150,7 @@
   opacity: 0.25;
 }
 :host .primary .between button.days-btn p {
-  color: #fff;
+  color: rgba(54, 55, 73, 1);
 }
 :host .primary .endSelection button.days-btn {
   border-top-left-radius: 0;
@@ -156,7 +162,7 @@
 :host .primary .days.startSelection:nth-child(7n):before,
 :host .primary .days.between:nth-child(7n) button.days-btn,
 :host .primary button.days-btn.is-last {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .primary .days.startSelection:nth-child(7n):before.on-selected,
 :host .primary .days.between:nth-child(7n) button.days-btn.on-selected,
@@ -167,7 +173,7 @@
 :host .primary .days.between:nth-child(7n+1) button.days-btn,
 :host .primary .days.between.is-first-wrap button.days-btn.is-first,
 :host .primary button.days-btn.is-first {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .primary .startSelection button.days-btn.is-first,
 :host .primary .endSelection button.days-btn.is-first,
@@ -178,10 +184,10 @@
   border-radius: 50%;
 }
 :host .primary .startSelection.is-last-wrap::before, :host .primary .startSelection.is-last-wrap::after {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .primary .endSelection.is-first-wrap::before, :host .primary .endSelection.is-first-wrap::after {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .primary .days .on-selected p {
   color: #fff;
@@ -231,7 +237,7 @@
   position: relative;
 }
 :host .secondary .startSelection:before, :host .secondary .startSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -250,7 +256,7 @@
   position: relative;
 }
 :host .secondary .endSelection:before, :host .secondary .endSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -278,7 +284,7 @@
   position: relative;
 }
 :host .secondary .between button.days-btn:after {
-  height: 36px;
+  height: 44px;
   width: 100%;
   content: "";
   position: absolute;
@@ -301,7 +307,7 @@
 :host .secondary .days.startSelection:nth-child(7n):before,
 :host .secondary .days.between:nth-child(7n) button.days-btn,
 :host .secondary button.days-btn.is-last {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .secondary .days.startSelection:nth-child(7n):before.on-selected,
 :host .secondary .days.between:nth-child(7n) button.days-btn.on-selected,
@@ -312,7 +318,7 @@
 :host .secondary .days.between:nth-child(7n+1) button.days-btn,
 :host .secondary .days.between.is-first-wrap button.days-btn.is-first,
 :host .secondary button.days-btn.is-first {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .secondary .startSelection button.days-btn.is-first,
 :host .secondary .endSelection button.days-btn.is-first,
@@ -323,10 +329,10 @@
   border-radius: 50%;
 }
 :host .secondary .startSelection.is-last-wrap::before, :host .secondary .startSelection.is-last-wrap::after {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .secondary .endSelection.is-first-wrap::before, :host .secondary .endSelection.is-first-wrap::after {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .secondary .days .on-selected p {
   color: #fff;
@@ -376,7 +382,7 @@
   position: relative;
 }
 :host .danger .startSelection:before, :host .danger .startSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -395,7 +401,7 @@
   position: relative;
 }
 :host .danger .endSelection:before, :host .danger .endSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -423,7 +429,7 @@
   position: relative;
 }
 :host .danger .between button.days-btn:after {
-  height: 36px;
+  height: 44px;
   width: 100%;
   content: "";
   position: absolute;
@@ -446,7 +452,7 @@
 :host .danger .days.startSelection:nth-child(7n):before,
 :host .danger .days.between:nth-child(7n) button.days-btn,
 :host .danger button.days-btn.is-last {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .danger .days.startSelection:nth-child(7n):before.on-selected,
 :host .danger .days.between:nth-child(7n) button.days-btn.on-selected,
@@ -457,7 +463,7 @@
 :host .danger .days.between:nth-child(7n+1) button.days-btn,
 :host .danger .days.between.is-first-wrap button.days-btn.is-first,
 :host .danger button.days-btn.is-first {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .danger .startSelection button.days-btn.is-first,
 :host .danger .endSelection button.days-btn.is-first,
@@ -468,10 +474,10 @@
   border-radius: 50%;
 }
 :host .danger .startSelection.is-last-wrap::before, :host .danger .startSelection.is-last-wrap::after {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .danger .endSelection.is-first-wrap::before, :host .danger .endSelection.is-first-wrap::after {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .danger .days .on-selected p {
   color: #fff;
@@ -514,14 +520,14 @@
 :host .dark .days .on-selected,
 :host .dark .startSelection button.days-btn,
 :host .dark .endSelection button.days-btn {
-  background-color: var(--ion-color-dark);
+  background-color: #45549d !important;
   color: #fff;
 }
 :host .dark .startSelection {
   position: relative;
 }
 :host .dark .startSelection:before, :host .dark .startSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -529,8 +535,8 @@
   right: 0;
   display: block;
 }
-:host .dark .startSelection:before {
-  background-color: var(--ion-color-dark);
+body[data-dark-mode=true] :host .startSelection:before button.days-btn {
+  background-color: #45549d !important;
 }
 :host .dark .startSelection:after {
   background-color: white;
@@ -540,7 +546,7 @@
   position: relative;
 }
 :host .dark .endSelection:before, :host .dark .endSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -548,8 +554,8 @@
   left: 0;
   display: block;
 }
-:host .dark .endSelection:before {
-  background-color: var(--ion-color-dark);
+body[data-dark-mode=true] :host .endSelection:before {
+  background-color: #45549d !important;
 }
 :host .dark .endSelection:after {
   background-color: white;
@@ -561,14 +567,20 @@
 :host .dark .startSelection button.days-btn {
   border-radius: 50%;
 }
-:host .dark .between button.days-btn {
-  background-color: var(--ion-color-dark);
+
+/** BOYS DONT CRY */
+body[data-dark-mode=true] :host .startSelection:before {
+  background-color: #45549d !important;
+}
+
+body[data-dark-mode=true] :host .between button.days-btn {
+  background-color: #45549d !important;
   width: 100%;
   border-radius: 0;
   position: relative;
 }
 :host .dark .between button.days-btn:after {
-  height: 36px;
+  height: 44px;
   width: 100%;
   content: "";
   position: absolute;
@@ -579,8 +591,12 @@
   background-color: white;
   opacity: 0.25;
 }
-:host .dark .between button.days-btn p {
-  color: #fff;
+
+body[data-dark-mode=true] :host .between button.days-btn p {
+  color: white !important;
+}
+body[data-dark-mode=true] :host .primary .endSelection:before {
+  background-color: #45549d !important;
 }
 :host .dark .endSelection button.days-btn {
   border-radius: 50%;
@@ -591,7 +607,7 @@
 :host .dark .days.startSelection:nth-child(7n):before,
 :host .dark .days.between:nth-child(7n) button.days-btn,
 :host .dark button.days-btn.is-last {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .dark .days.startSelection:nth-child(7n):before.on-selected,
 :host .dark .days.between:nth-child(7n) button.days-btn.on-selected,
@@ -602,7 +618,7 @@
 :host .dark .days.between:nth-child(7n+1) button.days-btn,
 :host .dark .days.between.is-first-wrap button.days-btn.is-first,
 :host .dark button.days-btn.is-first {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .dark .startSelection button.days-btn.is-first,
 :host .dark .endSelection button.days-btn.is-first,
@@ -613,10 +629,10 @@
   border-radius: 50%;
 }
 :host .dark .startSelection.is-last-wrap::before, :host .dark .startSelection.is-last-wrap::after {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .dark .endSelection.is-first-wrap::before, :host .dark .endSelection.is-first-wrap::after {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .dark .days .on-selected p {
   color: #fff;
@@ -666,7 +682,7 @@
   position: relative;
 }
 :host .light .startSelection:before, :host .light .startSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -675,7 +691,7 @@
   display: block;
 }
 :host .light .startSelection:before {
-  background-color: var(--ion-color-light);
+  background-color: #F2C666;
 }
 :host .light .startSelection:after {
   background-color: white;
@@ -685,7 +701,7 @@
   position: relative;
 }
 :host .light .endSelection:before, :host .light .endSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -713,7 +729,7 @@
   position: relative;
 }
 :host .light .between button.days-btn:after {
-  height: 36px;
+  height: 44px;
   width: 100%;
   content: "";
   position: absolute;
@@ -736,7 +752,7 @@
 :host .light .days.startSelection:nth-child(7n):before,
 :host .light .days.between:nth-child(7n) button.days-btn,
 :host .light button.days-btn.is-last {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .light .days.startSelection:nth-child(7n):before.on-selected,
 :host .light .days.between:nth-child(7n) button.days-btn.on-selected,
@@ -747,7 +763,7 @@
 :host .light .days.between:nth-child(7n+1) button.days-btn,
 :host .light .days.between.is-first-wrap button.days-btn.is-first,
 :host .light button.days-btn.is-first {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .light .startSelection button.days-btn.is-first,
 :host .light .endSelection button.days-btn.is-first,
@@ -758,10 +774,10 @@
   border-radius: 50%;
 }
 :host .light .startSelection.is-last-wrap::before, :host .light .startSelection.is-last-wrap::after {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .light .endSelection.is-first-wrap::before, :host .light .endSelection.is-first-wrap::after {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .light .days .on-selected p {
   color: #a0a0a0;
@@ -808,7 +824,7 @@
   position: relative;
 }
 :host .cal-color .startSelection:before, :host .cal-color .startSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -824,7 +840,7 @@
   position: relative;
 }
 :host .cal-color .endSelection:before, :host .cal-color .endSelection:after {
-  height: 36px;
+  height: 44px;
   width: 50%;
   content: "";
   position: absolute;
@@ -848,7 +864,7 @@
   position: relative;
 }
 :host .cal-color .between button.days-btn:after {
-  height: 36px;
+  height: 44px;
   width: 100%;
   content: "";
   position: absolute;
@@ -871,7 +887,7 @@
 :host .cal-color .days.startSelection:nth-child(7n):before,
 :host .cal-color .days.between:nth-child(7n) button.days-btn,
 :host .cal-color button.days-btn.is-last {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .cal-color .days.startSelection:nth-child(7n):before.on-selected,
 :host .cal-color .days.between:nth-child(7n) button.days-btn.on-selected,
@@ -882,7 +898,7 @@
 :host .cal-color .days.between:nth-child(7n+1) button.days-btn,
 :host .cal-color .days.between.is-first-wrap button.days-btn.is-first,
 :host .cal-color button.days-btn.is-first {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .cal-color .startSelection button.days-btn.is-first,
 :host .cal-color .endSelection button.days-btn.is-first,
@@ -893,10 +909,10 @@
   border-radius: 50%;
 }
 :host .cal-color .startSelection.is-last-wrap::before, :host .cal-color .startSelection.is-last-wrap::after {
-  border-radius: 0 36px 36px 0;
+  border-radius: 0 44px 44px 0;
 }
 :host .cal-color .endSelection.is-first-wrap::before, :host .cal-color .endSelection.is-first-wrap::after {
-  border-radius: 36px 0 0 36px;
+  border-radius: 44px 0 0 44px;
 }
 :host .cal-color .days .on-selected p {
   color: #fff;
@@ -940,11 +956,17 @@ body[data-dark-mode=true] :host button.days-btn[disabled] p {
   border-radius: 50%;
 }
 :host .day-low {
-  background-color: #2dd36f !important;
+  background-color: #6CD395 !important;
 }
 :host .day-medium {
-  background-color: #f2b01e !important;
+  background-color: #F2C666 !important;
 }
 :host .day-high {
-  background-color: #f53d3d !important;
+  background-color: #F58787 !important;
+}
+.today-label {
+  font-size: 0.7rem !important;
+}
+.not-today {
+  padding-top: 0.7rem !important;
 }

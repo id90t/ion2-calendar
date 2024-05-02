@@ -20,20 +20,20 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
 
 @Component({
     selector: 'ion-calendar-demand-modal',
-    styleUrls: ['./calendar.modal.scss'],
+    styleUrls: ['./calendar.modal.scss', './calendar-demand.component.scss'],
     template: `
     <ion-header>
         <ion-toolbar>
             <ion-buttons slot="secondary">
                 <ion-button type='button' slot="icon-only" fill="clear" class="primary" (click)="onCancel()">
-                    <span *ngIf="_d.closeLabel !== '' && !_d.closeIcon">{{ _d.closeLabel }}</span>
-                    <ion-icon *ngIf="_d.closeIcon" name="close"></ion-icon>
+                    <span *ngIf="_d?.closeLabel !== '' && !_d?.closeIcon">{{ _d?.closeLabel }}</span>
+                    <ion-icon *ngIf="_d?.closeIcon" name="close"></ion-icon>
                 </ion-button>
             </ion-buttons>
-            <ion-title>{{ _d.title }} </ion-title>
+            <ion-title>{{ _d?.title }} </ion-title>
         </ion-toolbar>
         <ng-content select="[sub-header]"></ng-content>
-        <ion-row class="calendar-demand-indicator-container">
+        <ion-row class="calendar-demand-indicator-container ion-padding-top" *ngIf="!loading">
             <div class="calendar-demand-indicator calendar-demand-indicator-cheaper">
                 {{ cheaperText }}
             </div>
@@ -43,8 +43,17 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
             <div class="calendar-demand-indicator calendar-demand-indicator-higher">
                 {{ higherText }}
             </div>
+            
+            <ion-button shape="round" fill="clear" id="click-trigger" class="ion-no-padding">
+                <ion-icon name="information-circle-outline"></ion-icon>
+            </ion-button>            
+            <ion-popover trigger="click-trigger" triggerAction="click">
+                <ng-template>
+                    <ion-content class="ion-padding">Based on the most frequent searches per day</ion-content>
+                </ng-template>
+            </ion-popover>
         </ion-row>
-        <ion-calendar-week
+        <ion-calendar-week *ngIf="_d"
             [color]="_d.color"
             [weekArray]="_d.weekdays"
             [weekStart]="_d.weekStart">
@@ -53,34 +62,38 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
 
     <ion-content class="calendar-page"
         [scrollEvents]="true"
-        [ngClass]="{'multi-selection': _d.pickMode === 'multi'}"
+        [ngClass]="{'multi-selection': _d?.pickMode === 'multi'}"
         (ionScroll)="onScroll($event)">
 
-    <div #months>
-        <ng-template ngFor let-month [ngForOf]="calendarMonths" [ngForTrackBy]="trackByIndex" let-i="index">
-            <div class="month-box" [attr.id]="'month-' + i">
-                <h4 class="month-title">{{ monthFormat(month.original?.date) }}</h4>
-                <ion-calendar-month [month]="month"
-                    [pickMode]="_d.pickMode"
-                    [isSaveHistory]="_d.isSaveHistory"
-                    [id]="_d.id"
-                    [color]="_d.color"
-                    [maxMultiDates]="_d.maxMultiDates"
-                    (change)="onChange($event)"
-                    [(ngModel)]="datesTemp">
-                </ion-calendar-month>
-            </div>
-        </ng-template>
-      </div>
+        <div #months *ngIf="!loading && _d">
+            <ng-template ngFor let-month [ngForOf]="calendarMonths" [ngForTrackBy]="trackByIndex" let-i="index">
+                <div class="month-box" [attr.id]="'month-' + i">
+                    <h4 class="month-title">{{ monthFormat(month.original?.date) }}</h4>
+                    <ion-calendar-month [month]="month"
+                        [pickMode]="_d.pickMode"
+                        [isSaveHistory]="_d.isSaveHistory"
+                        [id]="_d.id"
+                        [color]="_d.color"
+                        [maxMultiDates]="_d.maxMultiDates"
+                        (change)="onChange($event)"
+                        [(ngModel)]="datesTemp">
+                    </ion-calendar-month>
+                </div>
+            </ng-template>
+        </div>
 
-      <ion-infinite-scroll threshold="25%" (ionInfinite)="nextMonth($event)">
-        <ion-infinite-scroll-content></ion-infinite-scroll-content>
-      </ion-infinite-scroll>
+        <div *ngIf="loading" class="loading-container">
+            <ion-spinner name="crescent" color="primary" class="loading-indicator"></ion-spinner>
+        </div>
+
+        <ion-infinite-scroll threshold="25%" (ionInfinite)="nextMonth($event)">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+        </ion-infinite-scroll>
 
     </ion-content>
 
     <ion-footer>
-        <ion-row *ngIf="_d.pickMode === 'range'" lines="none" class="ion-margin-vertical" [class]="'dates-toolbar'" no-border>
+        <ion-row *ngIf="_d?.pickMode === 'range'" lines="none" class="ion-margin-vertical" [class]="'dates-toolbar'" no-border>
             <ion-col size="4" class="start-date ion-text-nowrap">
                 {{ getDayFormatted(datesTemp[0]) || 'Start Date' }}
             </ion-col>
@@ -91,9 +104,9 @@ const NUM_OF_MONTHS_TO_CREATE = 3;
                 {{ getDayFormatted(datesTemp[1]) || 'End Date' }}
             </ion-col>
         </ion-row>
-      <ion-button expand="full" *ngIf="!_d.autoDone" [disabled]="!canDone()" (click)="done()">
-        <span *ngIf="_d.doneLabel !== '' && !_d.doneIcon">{{ _d.doneLabel }}</span>
-        <ion-icon *ngIf="_d.doneIcon" name="checkmark"></ion-icon>
+      <ion-button expand="full" *ngIf="!_d?.autoDone" [disabled]="!canDone()" (click)="done()">
+        <span *ngIf="_d?.doneLabel !== '' && !_d?.doneIcon">{{ _d?.doneLabel }}</span>
+        <ion-icon *ngIf="_d?.doneIcon" name="checkmark"></ion-icon>
       </ion-button>
     </ion-footer>
   `,
@@ -117,6 +130,7 @@ export class CalendarDemandModal implements OnInit, AfterViewInit {
     @Input() averageText: string = 'Average';
     @Input() higherText: string = 'Higher';
 
+    loading: boolean = true;
     datesTemp: Array<CalendarDay> | any = [null, null];
     calendarMonths: Array<CalendarMonth> | any;
     step: number | any;
@@ -140,9 +154,7 @@ export class CalendarDemandModal implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-        this.findCssClass();
-        if (this._d.canBackwardsSelected) this.backwardsMonth();
-        this.scrollToDefaultDate();
+
     }
 
     init(): void {
@@ -193,8 +205,15 @@ export class CalendarDemandModal implements OnInit, AfterViewInit {
             const days = await this.demandCalendarService.get(this.latitude, this.longitude).toPromise();
             this.options.daysConfig = this.buildDays(days)
         }
+        this.loading = false;
         this.init();
         this.initDefaultDate();
+
+        this.findCssClass();
+        if (this._d?.canBackwardsSelected) {
+            this.backwardsMonth();
+        }
+        this.scrollToDefaultDate();
     }
 
     buildDays(items: any[]): DayConfig[] {
@@ -212,11 +231,13 @@ export class CalendarDemandModal implements OnInit, AfterViewInit {
     }
 
     findCssClass(): void {
-        const { cssClass } = this._d;
-        if (cssClass) {
-            cssClass.split(' ').forEach((_class: string) => {
-                if (_class.trim() !== '') this._renderer.addClass(this._elementRef.nativeElement, _class);
-            });
+        if (this._d) {
+            const { cssClass } = this._d;
+            if (cssClass) {
+                cssClass.split(' ').forEach((_class: string) => {
+                    if (_class.trim() !== '') this._renderer.addClass(this._elementRef.nativeElement, _class);
+                });
+            }
         }
     }
 
@@ -247,8 +268,11 @@ export class CalendarDemandModal implements OnInit, AfterViewInit {
         if (!Array.isArray(this.datesTemp)) {
             return false;
         }
-        const { pickMode, defaultEndDateToStartDate } = this._d;
+        if (!this._d) {
+            return false;
+        }
 
+        const { pickMode, defaultEndDateToStartDate } = this._d;
         switch (pickMode) {
             case pickModes.SINGLE:
                 return !!(this.datesTemp[0] && this.datesTemp[0].time);
@@ -309,7 +333,7 @@ export class CalendarDemandModal implements OnInit, AfterViewInit {
 
     scrollToDate(date: Date): void {
         const defaultDateIndex = this.findInitMonthNumber(date);
-        const monthElement = this.monthsEle.nativeElement.children[`month-${defaultDateIndex}`];
+        const monthElement = this.monthsEle?.nativeElement.children[`month-${defaultDateIndex}`];
         const domElemReadyWaitTime = 300;
 
         setTimeout(() => {
@@ -326,7 +350,7 @@ export class CalendarDemandModal implements OnInit, AfterViewInit {
     }
 
     onScroll($event: any): void {
-        if (!this._d.canBackwardsSelected) return;
+        if (!this._d?.canBackwardsSelected) return;
 
         const { detail } = $event;
 
@@ -351,8 +375,10 @@ export class CalendarDemandModal implements OnInit, AfterViewInit {
         return this.content.getScrollElement().then((scrollElem: any) => {
             scrollElem.style.zIndex = '2';
             scrollElem.style.zIndex = 'initial';
-            this.monthsEle.nativeElement.style.zIndex = '2';
-            this.monthsEle.nativeElement.style.zIndex = 'initial';
+            if (this.monthsEle?.nativeElement) {
+                this.monthsEle.nativeElement.style.zIndex = '2';
+                this.monthsEle.nativeElement.style.zIndex = 'initial';
+            }
         });
     }
 
