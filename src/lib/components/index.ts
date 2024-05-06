@@ -11,5 +11,5 @@ export const CALENDAR_COMPONENTS = [
   MonthComponent,
   CalendarComponent,
   MonthPickerComponent,
-  CalendarDemandModal
+  CalendarDemandModal,
 ];
