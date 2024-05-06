@@ -2204,7 +2204,7 @@ const CALENDAR_COMPONENTS = [
     MonthComponent,
     CalendarComponent,
     MonthPickerComponent,
-    CalendarDemandModal
+    CalendarDemandModal,
 ];
 
 function calendarController(modalCtrl, calSvc) {
