@@ -14,5 +14,5 @@ export declare class MonthPickerComponent {
     _onSelect(month: number): void;
     getDate(month: number): Date;
     static ɵfac: i0.ɵɵFactoryDeclaration<MonthPickerComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MonthPickerComponent, "ion-calendar-month-picker", never, { "month": "month"; "color": "color"; "monthFormat": "monthFormat"; }, { "select": "select"; }, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MonthPickerComponent, "ion-calendar-month-picker", never, { "month": { "alias": "month"; "required": false; }; "color": { "alias": "color"; "required": false; }; "monthFormat": { "alias": "monthFormat"; "required": false; }; }, { "select": "select"; }, never, never, false, never>;
 }
