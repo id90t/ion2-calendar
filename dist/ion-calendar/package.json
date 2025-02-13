@@ -1,6 +1,6 @@
 {
   "name": "ion2-calendar",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.3.12",
