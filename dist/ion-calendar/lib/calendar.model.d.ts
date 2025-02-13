@@ -108,8 +108,8 @@ export declare class CalendarComponentMonthChange {
     oldMonth: CalendarResult | undefined;
     newMonth: CalendarResult | undefined;
 }
-export declare type DefaultDate = Date | string | number | null;
-export declare type Colors = 'primary' | 'secondary' | 'danger' | 'light' | 'dark' | string;
-export declare type PickMode = 'multi' | 'single' | 'range';
-export declare type CalendarComponentTypeProperty = 'string' | 'js-date' | 'moment' | 'time' | 'object';
-export declare type CalendarComponentPayloadTypes = string | Date | number | {};
+export type DefaultDate = Date | string | number | null;
+export type Colors = 'primary' | 'secondary' | 'danger' | 'light' | 'dark' | string;
+export type PickMode = 'multi' | 'single' | 'range';
+export type CalendarComponentTypeProperty = 'string' | 'js-date' | 'moment' | 'time' | 'object';
+export type CalendarComponentPayloadTypes = string | Date | number | {};

@@ -56,5 +56,5 @@ export declare class CalendarDemandModal implements OnInit, AfterViewInit {
     getDayFormatted(data: any): string | null;
     trackByIndex(index: number, momentDate: CalendarMonth): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<CalendarDemandModal, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CalendarDemandModal, "ion-calendar-demand-modal", never, { "options": "options"; "demandCalendarService": "demandCalendarService"; "latitude": "latitude"; "longitude": "longitude"; "cheaperText": "cheaperText"; "averageText": "averageText"; "higherText": "higherText"; }, {}, never, ["[sub-header]"], false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CalendarDemandModal, "ion-calendar-demand-modal", never, { "options": { "alias": "options"; "required": false; }; "demandCalendarService": { "alias": "demandCalendarService"; "required": false; }; "latitude": { "alias": "latitude"; "required": false; }; "longitude": { "alias": "longitude"; "required": false; }; "cheaperText": { "alias": "cheaperText"; "required": false; }; "averageText": { "alias": "averageText"; "required": false; }; "higherText": { "alias": "higherText"; "required": false; }; }, {}, never, ["[sub-header]"], false, never>;
 }
