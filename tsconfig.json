@@ -19,7 +19,6 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "ion-calendar": [
-        "dist/ion-calendar/ion-calendar",
         "dist/ion-calendar"
       ]
     },
@@ -32,16 +31,16 @@
     "target": "ES2022",
     "lib": [
       "dom",
-      "es2017"
+      "es2022"
     ],
-    "module": "es2020"
+    "module": "es2022"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
-    "compilationMode": "full",
+    "compilationMode": "partial",
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "enableResourceInlining": true,
