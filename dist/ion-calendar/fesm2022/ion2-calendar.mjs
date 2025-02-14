@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { InjectionToken, Injectable, Optional, Inject, Component, Input, forwardRef, EventEmitter, Output, HostBinding, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { InjectionToken, Optional, Inject, Injectable, Input, Component, forwardRef, EventEmitter, Output, HostBinding, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import * as i1$1 from '@ionic/angular';
 import { IonContent, IonicModule, ModalController } from '@ionic/angular';
 import moment from 'moment';
@@ -244,27 +244,18 @@ class CalendarService {
             date: _moment.date(),
         };
     }
-    static { this.ɵfac = function CalendarService_Factory(t) { return new (t || CalendarService)(i0.ɵɵinject(DEFAULT_CALENDAR_OPTIONS, 8)); }; }
-    static { this.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: CalendarService, factory: CalendarService.ɵfac }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarService, deps: [{ token: DEFAULT_CALENDAR_OPTIONS, optional: true }], target: i0.ɵɵFactoryTarget.Injectable }); }
+    static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarService }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarService, [{
-        type: Injectable
-    }], () => [{ type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [DEFAULT_CALENDAR_OPTIONS]
-            }] }], null); })();
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarService, decorators: [{
+            type: Injectable
+        }], ctorParameters: () => [{ type: undefined, decorators: [{
+                    type: Optional
+                }, {
+                    type: Inject,
+                    args: [DEFAULT_CALENDAR_OPTIONS]
+                }] }] });
 
-function CalendarWeekComponent_li_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "li");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const w_r1 = ctx.$implicit;
-    i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(w_r1);
-} }
 class CalendarWeekComponent {
     constructor() {
         this._weekArray = defaults.WEEKS_FORMAT;
@@ -294,153 +285,32 @@ class CalendarWeekComponent {
             this._displayWeekArray = [...this._weekArray];
         }
     }
-    static { this.ɵfac = function CalendarWeekComponent_Factory(t) { return new (t || CalendarWeekComponent)(); }; }
-    static { this.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CalendarWeekComponent, selectors: [["ion-calendar-week"]], inputs: { color: "color", weekArray: "weekArray", weekStart: "weekStart" }, decls: 3, vars: 5, consts: [["no-border-top", ""], [4, "ngFor", "ngForOf"]], template: function CalendarWeekComponent_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵelementStart(0, "ion-toolbar", 0)(1, "ul");
-            i0.ɵɵtemplate(2, CalendarWeekComponent_li_2_Template, 2, 1, "li", 1);
-            i0.ɵɵelementEnd()();
-        } if (rf & 2) {
-            i0.ɵɵclassMap("week-toolbar ");
-            i0.ɵɵadvance();
-            i0.ɵɵclassMap("week-title " + ctx.color);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngForOf", ctx._displayWeekArray);
-        } }, dependencies: [i1.NgForOf, i1$1.IonToolbar], styles: ["[_nghost-%COMP%]   .toolbar-background-md[_ngcontent-%COMP%], [_nghost-%COMP%]   .toolbar-background-ios[_ngcontent-%COMP%]{background:transparent}[_nghost-%COMP%]   .week-toolbar[_ngcontent-%COMP%]{--padding-start: 0;--padding-end: 0;--padding-bottom: 0;--padding-top: 0}[_nghost-%COMP%]   .week-toolbar.primary[_ngcontent-%COMP%]{--background: var(--ion-color-primary)}[_nghost-%COMP%]   .week-toolbar.secondary[_ngcontent-%COMP%]{--background: var(--ion-color-secondary)}[_nghost-%COMP%]   .week-toolbar.danger[_ngcontent-%COMP%]{--background: var(--ion-color-danger)}[_nghost-%COMP%]   .week-toolbar.dark[_ngcontent-%COMP%]{--background: var(--ion-color-dark)}[_nghost-%COMP%]   .week-toolbar.light[_ngcontent-%COMP%]{--background: var(--ion-color-light)}[_nghost-%COMP%]   .week-toolbar.transparent[_ngcontent-%COMP%]{--background: transparent}[_nghost-%COMP%]   .week-toolbar.toolbar-md[_ngcontent-%COMP%]{min-height:44px}[_nghost-%COMP%]   .week-title[_ngcontent-%COMP%]{margin:0;height:44px;width:100%;padding:15px 0;font-size:.9em}[_nghost-%COMP%]   .week-title.light[_ngcontent-%COMP%], [_nghost-%COMP%]   .week-title.transparent[_ngcontent-%COMP%]{color:#9e9e9e}[_nghost-%COMP%]   .week-title[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]{list-style-type:none;display:block;float:left;width:14%;text-align:center;font-weight:700}[_nghost-%COMP%]   .week-title[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]:nth-of-type(7n), [_nghost-%COMP%]   .week-title[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]:nth-of-type(7n+1){width:15%}"] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarWeekComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: CalendarWeekComponent, selector: "ion-calendar-week", inputs: { color: "color", weekArray: "weekArray", weekStart: "weekStart" }, ngImport: i0, template: `
+    <ion-toolbar [class]="'week-toolbar '" no-border-top>
+      <ul [class]="'week-title ' + color">
+        <li *ngFor="let w of _displayWeekArray">{{ w }}</li>
+      </ul>
+    </ion-toolbar>
+  `, isInline: true, styles: [":host .toolbar-background-md,:host .toolbar-background-ios{background:transparent}:host .week-toolbar{--padding-start: 0;--padding-end: 0;--padding-bottom: 0;--padding-top: 0}:host .week-toolbar.primary{--background: var(--ion-color-primary)}:host .week-toolbar.secondary{--background: var(--ion-color-secondary)}:host .week-toolbar.danger{--background: var(--ion-color-danger)}:host .week-toolbar.dark{--background: var(--ion-color-dark)}:host .week-toolbar.light{--background: var(--ion-color-light)}:host .week-toolbar.transparent{--background: transparent}:host .week-toolbar.toolbar-md{min-height:44px}:host .week-title{margin:0;height:44px;width:100%;padding:15px 0;font-size:.9em}:host .week-title.light,:host .week-title.transparent{color:#9e9e9e}:host .week-title li{list-style-type:none;display:block;float:left;width:14%;text-align:center;font-weight:700}:host .week-title li:nth-of-type(7n),:host .week-title li:nth-of-type(7n+1){width:15%}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: i1$1.IonToolbar, selector: "ion-toolbar", inputs: ["color", "mode"] }] }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarWeekComponent, [{
-        type: Component,
-        args: [{ selector: 'ion-calendar-week', template: `
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarWeekComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'ion-calendar-week', template: `
     <ion-toolbar [class]="'week-toolbar '" no-border-top>
       <ul [class]="'week-title ' + color">
         <li *ngFor="let w of _displayWeekArray">{{ w }}</li>
       </ul>
     </ion-toolbar>
   `, styles: [":host .toolbar-background-md,:host .toolbar-background-ios{background:transparent}:host .week-toolbar{--padding-start: 0;--padding-end: 0;--padding-bottom: 0;--padding-top: 0}:host .week-toolbar.primary{--background: var(--ion-color-primary)}:host .week-toolbar.secondary{--background: var(--ion-color-secondary)}:host .week-toolbar.danger{--background: var(--ion-color-danger)}:host .week-toolbar.dark{--background: var(--ion-color-dark)}:host .week-toolbar.light{--background: var(--ion-color-light)}:host .week-toolbar.transparent{--background: transparent}:host .week-toolbar.toolbar-md{min-height:44px}:host .week-title{margin:0;height:44px;width:100%;padding:15px 0;font-size:.9em}:host .week-title.light,:host .week-title.transparent{color:#9e9e9e}:host .week-title li{list-style-type:none;display:block;float:left;width:14%;text-align:center;font-weight:700}:host .week-title li:nth-of-type(7n),:host .week-title li:nth-of-type(7n+1){width:15%}\n"] }]
-    }], () => [], { color: [{
-            type: Input
-        }], weekArray: [{
-            type: Input
-        }], weekStart: [{
-            type: Input
-        }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(CalendarWeekComponent, { className: "CalendarWeekComponent" }); })();
+        }], ctorParameters: () => [], propDecorators: { color: [{
+                type: Input
+            }], weekArray: [{
+                type: Input
+            }], weekStart: [{
+                type: Input
+            }] } });
 
-const _c0$3 = (a0, a1, a2) => ({ "day-low": a0, "day-medium": a1, "day-high": a2 });
-function MonthComponent_ng_template_1_ng_template_1_ng_container_1_small_5_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "small");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const day_r2 = i0.ɵɵnextContext(2).$implicit;
-    i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(day_r2 == null ? null : day_r2.subTitle);
-} }
-function MonthComponent_ng_template_1_ng_template_1_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    const _r1 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "button", 6);
-    i0.ɵɵpipe(2, "date");
-    i0.ɵɵlistener("click", function MonthComponent_ng_template_1_ng_template_1_ng_container_1_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r1); const day_r2 = i0.ɵɵnextContext().$implicit; const ctx_r2 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r2.onSelected(day_r2)); });
-    i0.ɵɵelementStart(3, "p");
-    i0.ɵɵtext(4);
-    i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(5, MonthComponent_ng_template_1_ng_template_1_ng_container_1_small_5_Template, 2, 1, "small", 5);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const day_r2 = i0.ɵɵnextContext().$implicit;
-    const ctx_r2 = i0.ɵɵnextContext(2);
-    i0.ɵɵadvance();
-    i0.ɵɵclassMap("days-btn " + day_r2.cssClass);
-    i0.ɵɵclassProp("today", day_r2.isToday)("marked", day_r2.marked)("last-month-day", day_r2.isLastMonth)("next-month-day", day_r2.isNextMonth)("on-selected", ctx_r2.isSelected(day_r2.time));
-    i0.ɵɵproperty("disabled", day_r2.disable);
-    i0.ɵɵattribute("aria-label", i0.ɵɵpipeBind2(2, 16, ctx_r2.getDayLabel(day_r2), ctx_r2.DAY_DATE_FORMAT));
-    i0.ɵɵadvance(3);
-    i0.ɵɵtextInterpolate(day_r2.title);
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", day_r2.subTitle);
-} }
-function MonthComponent_ng_template_1_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 4);
-    i0.ɵɵtemplate(1, MonthComponent_ng_template_1_ng_template_1_ng_container_1_Template, 6, 19, "ng-container", 5);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const day_r2 = ctx.$implicit;
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", day_r2);
-} }
-function MonthComponent_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 2);
-    i0.ɵɵtemplate(1, MonthComponent_ng_template_1_ng_template_1_Template, 2, 1, "ng-template", 3);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngForOf", ctx_r2.month == null ? null : ctx_r2.month.days)("ngForTrackBy", ctx_r2.trackByTime);
-} }
-function MonthComponent_ng_template_2_ng_template_1_ng_container_1_small_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "small");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const day_r5 = i0.ɵɵnextContext(2).$implicit;
-    i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(day_r5 == null ? null : day_r5.subTitle);
-} }
-function MonthComponent_ng_template_2_ng_template_1_ng_container_1_small_5_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "small", 8);
-    i0.ɵɵelement(1, "div", 9);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const day_r5 = i0.ɵɵnextContext(2).$implicit;
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction3(1, _c0$3, day_r5.demandLevel === "Low", day_r5.demandLevel === "Medium", day_r5.demandLevel === "High"));
-} }
-function MonthComponent_ng_template_2_ng_template_1_ng_container_1_Template(rf, ctx) { if (rf & 1) {
-    const _r4 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵelementStart(1, "button", 6);
-    i0.ɵɵlistener("click", function MonthComponent_ng_template_2_ng_template_1_ng_container_1_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r4); const day_r5 = i0.ɵɵnextContext().$implicit; const ctx_r2 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r2.onSelected(day_r5)); });
-    i0.ɵɵelementStart(2, "p");
-    i0.ɵɵtext(3);
-    i0.ɵɵelementEnd();
-    i0.ɵɵtemplate(4, MonthComponent_ng_template_2_ng_template_1_ng_container_1_small_4_Template, 2, 1, "small", 5)(5, MonthComponent_ng_template_2_ng_template_1_ng_container_1_small_5_Template, 2, 5, "small", 7);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const day_r5 = i0.ɵɵnextContext().$implicit;
-    const ctx_r2 = i0.ɵɵnextContext(2);
-    i0.ɵɵadvance();
-    i0.ɵɵclassMap("days-btn " + day_r5.cssClass);
-    i0.ɵɵclassProp("today", day_r5.isToday)("marked", day_r5.marked)("last-month-day", day_r5.isLastMonth)("next-month-day", day_r5.isNextMonth)("is-first", day_r5.isFirst)("is-last", day_r5.isLast)("on-selected", ctx_r2.isSelected(day_r5.time));
-    i0.ɵɵproperty("disabled", day_r5.disable);
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(day_r5.title);
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", day_r5.subTitle);
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", day_r5.demandLevel);
-} }
-function MonthComponent_ng_template_2_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 4);
-    i0.ɵɵtemplate(1, MonthComponent_ng_template_2_ng_template_1_ng_container_1_Template, 6, 20, "ng-container", 5);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const day_r5 = ctx.$implicit;
-    const ctx_r2 = i0.ɵɵnextContext(2);
-    i0.ɵɵclassProp("startSelection", ctx_r2.isStartSelection(day_r5))("endSelection", ctx_r2.isEndSelection(day_r5))("is-first-wrap", day_r5 == null ? null : day_r5.isFirst)("is-last-wrap", day_r5 == null ? null : day_r5.isLast)("between", ctx_r2.isBetween(day_r5));
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", day_r5);
-} }
-function MonthComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 2);
-    i0.ɵɵtemplate(1, MonthComponent_ng_template_2_ng_template_1_Template, 2, 11, "ng-template", 3);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngForOf", ctx_r2.month.days)("ngForTrackBy", ctx_r2.trackByTime);
-} }
 const MONTH_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => MonthComponent),
@@ -585,21 +455,77 @@ class MonthComponent {
             this.change.emit(emitValue);
         }
     }
-    static { this.ɵfac = function MonthComponent_Factory(t) { return new (t || MonthComponent)(i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); }; }
-    static { this.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MonthComponent, selectors: [["ion-calendar-month"]], inputs: { month: "month", pickMode: "pickMode", isSaveHistory: "isSaveHistory", id: "id", readonly: "readonly", color: "color", maxMultiDates: "maxMultiDates" }, outputs: { change: "change", select: "select", selectStart: "selectStart", selectEnd: "selectEnd" }, features: [i0.ɵɵProvidersFeature([MONTH_VALUE_ACCESSOR])], decls: 4, vars: 4, consts: [["rangeBox", ""], [3, "ngIf", "ngIfElse"], [1, "days-box"], ["ngFor", "", 3, "ngForOf", "ngForTrackBy"], [1, "days"], [4, "ngIf"], ["type", "button", 3, "click", "disabled"], ["class", "day-dot-container", 4, "ngIf"], [1, "day-dot-container"], [1, "day-dot", 3, "ngClass"]], template: function MonthComponent_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵtemplate(1, MonthComponent_ng_template_1_Template, 2, 2, "ng-template", 1)(2, MonthComponent_ng_template_2_Template, 2, 2, "ng-template", null, 0, i0.ɵɵtemplateRefExtractor);
-            i0.ɵɵelementEnd();
-        } if (rf & 2) {
-            const rangeBox_r6 = i0.ɵɵreference(3);
-            i0.ɵɵclassMap(ctx.color);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", !ctx._isRange)("ngIfElse", rangeBox_r6);
-        } }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.DatePipe], styles: ["[_nghost-%COMP%]{display:inline-block;width:100%}[_nghost-%COMP%]   .days-box[_ngcontent-%COMP%]{padding:.5rem}[_nghost-%COMP%]   .days[_ngcontent-%COMP%]:nth-of-type(7n), [_nghost-%COMP%]   .days[_ngcontent-%COMP%]:nth-of-type(7n+1){width:15%}[_nghost-%COMP%]   .days[_ngcontent-%COMP%]{width:14%;float:left;text-align:center;height:44px;margin-bottom:5px}[_nghost-%COMP%]   .days[_ngcontent-%COMP%]   .marked[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{font-weight:500}[_nghost-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%]{border:none}[_nghost-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{font-size:1.3em}[_nghost-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:44px;width:44px;display:block;margin:0 auto;padding:0;height:44px;background-color:transparent;position:relative;z-index:2;outline:0}[_nghost-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{margin:0;font-size:1.2em;color:#333;text-align:center}[_nghost-%COMP%]   button.days-btn[disabled][_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#00000040}[_nghost-%COMP%]   button.days-btn.on-selected[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]{transition:bottom .3s;bottom:3px}[_nghost-%COMP%]   button.days-btn[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]{overflow:hidden;display:block;left:0;right:0;bottom:3px;position:absolute;z-index:1;text-align:center;font-weight:200}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   small[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:var(--ion-color-primary)}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{font-weight:700}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:var(--ion-color-primary);color:#fff}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:var(--ion-color-primary);color:#fff}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before{background-color:#6078ee33}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before{background-color:#6078ee33}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:after{background-color:transparent}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-top-right-radius:0;border-bottom-right-radius:0}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:#6078ee33;width:100%;border-radius:0;position:relative}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#363749}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-top-left-radius:0;border-bottom-left-radius:0}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before, [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before.on-selected, [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days.endSelection[_ngcontent-%COMP%]:nth-child(7n+1):before, [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n+1)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days.between.is-first-wrap[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%]{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   button.days-btn.is-first.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:after{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:after{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}[_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:before{--ion-color-primary: transparent}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   small[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:var(--ion-color-secondary)}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{font-weight:700}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:var(--ion-color-secondary);color:#fff}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before{background-color:var(--ion-color-secondary)}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before{background-color:var(--ion-color-secondary)}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:after{background-color:transparent}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:var(--ion-color-secondary);width:100%;border-radius:0;position:relative}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before, [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before.on-selected, [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days.endSelection[_ngcontent-%COMP%]:nth-child(7n+1):before, [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n+1)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days.between.is-first-wrap[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%]{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   button.days-btn.is-first.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:after{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:after{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}[_nghost-%COMP%]   .secondary[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:before{--ion-color-primary: transparent}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   small[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:var(--ion-color-danger)}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{font-weight:700}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:var(--ion-color-danger);color:#fff}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before{background-color:var(--ion-color-danger)}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before{background-color:var(--ion-color-danger)}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:after{background-color:transparent}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:var(--ion-color-danger);width:100%;border-radius:0;position:relative}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before, [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before.on-selected, [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days.endSelection[_ngcontent-%COMP%]:nth-child(7n+1):before, [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n+1)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days.between.is-first-wrap[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%]{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   button.days-btn.is-first.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:after{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:after{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}[_nghost-%COMP%]   .danger[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:before{--ion-color-primary: transparent}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   small[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:var(--ion-color-dark)}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{font-weight:700}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:#45549d!important;color:#fff}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}body[data-dark-mode=true]   [_nghost-%COMP%]   .startSelection[_ngcontent-%COMP%]:before   button.days-btn[_ngcontent-%COMP%]{background-color:#45549d!important}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}body[data-dark-mode=true]   [_nghost-%COMP%]   .endSelection[_ngcontent-%COMP%]:before{background-color:#45549d!important}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:after{background-color:transparent}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}body[data-dark-mode=true]   [_nghost-%COMP%]   .startSelection[_ngcontent-%COMP%]:before{background-color:#45549d!important}body[data-dark-mode=true]   [_nghost-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:#45549d!important;width:100%;border-radius:0;position:relative}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}body[data-dark-mode=true]   [_nghost-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff!important}body[data-dark-mode=true]   [_nghost-%COMP%]   .primary[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before{background-color:#45549d!important}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before, [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before.on-selected, [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days.endSelection[_ngcontent-%COMP%]:nth-child(7n+1):before, [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n+1)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days.between.is-first-wrap[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%]{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   button.days-btn.is-first.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:after{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:after{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}[_nghost-%COMP%]   .dark[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:before{--ion-color-primary: transparent}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   small[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:var(--ion-color-light)}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{font-weight:700}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#a0a0a0}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:var(--ion-color-light);color:#a0a0a0}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before{background-color:#f2c666}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before{background-color:var(--ion-color-light)}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:after{background-color:transparent}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{background-color:var(--ion-color-light);width:100%;border-radius:0;position:relative}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#a0a0a0}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#a0a0a0}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before, [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before.on-selected, [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days.endSelection[_ngcontent-%COMP%]:nth-child(7n+1):before, [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n+1)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days.between.is-first-wrap[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%]{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   button.days-btn.is-first.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:after{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:after{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#a0a0a0}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:before{--ion-color-primary: transparent}[_nghost-%COMP%]   .light[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#565656}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{font-weight:700}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .today.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .marked.on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]{position:relative}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]:after{background-color:#fff;opacity:.25}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:after{background-color:transparent}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{width:100%;border-radius:0;position:relative}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before, [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days.startSelection[_ngcontent-%COMP%]:nth-child(7n):before.on-selected, [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n)   button.days-btn.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days.endSelection[_ngcontent-%COMP%]:nth-child(7n+1):before, [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days.between[_ngcontent-%COMP%]:nth-child(7n+1)   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days.between.is-first-wrap[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%]{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-first[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   button.days-btn.is-first.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   button.days-btn.is-last.on-selected[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn.is-last[_ngcontent-%COMP%]{border-radius:50%}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection.is-last-wrap[_ngcontent-%COMP%]:after{border-radius:0 44px 44px 0}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:before, [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection.is-first-wrap[_ngcontent-%COMP%]:after{border-radius:44px 0 0 44px}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .days[_ngcontent-%COMP%]   .on-selected[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .endSelection[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%], [_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .between[_ngcontent-%COMP%]   button.days-btn[_ngcontent-%COMP%]{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}[_nghost-%COMP%]   .cal-color[_ngcontent-%COMP%]   .startSelection.endSelection[_ngcontent-%COMP%]:before{--ion-color-primary: transparent}body[data-dark-mode=true]   [_nghost-%COMP%]   button.days-btn[_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#fff}body[data-dark-mode=true]   [_nghost-%COMP%]   button.days-btn[disabled][_ngcontent-%COMP%]   p[_ngcontent-%COMP%]{color:#ffffff80}[_nghost-%COMP%]   .day-dot-container[_ngcontent-%COMP%]{display:flex!important;justify-content:center}[_nghost-%COMP%]   .day-dot[_ngcontent-%COMP%]{width:5px;height:5px;border-radius:50%}[_nghost-%COMP%]   .day-low[_ngcontent-%COMP%]{background-color:#6cd395!important}[_nghost-%COMP%]   .day-medium[_ngcontent-%COMP%]{background-color:#f2c666!important}[_nghost-%COMP%]   .day-high[_ngcontent-%COMP%]{background-color:#f58787!important}.today-label[_ngcontent-%COMP%]{font-size:.7rem!important}.not-today[_ngcontent-%COMP%]{padding-top:.7rem!important}"] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MonthComponent, deps: [{ token: i0.ChangeDetectorRef }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: MonthComponent, selector: "ion-calendar-month", inputs: { month: "month", pickMode: "pickMode", isSaveHistory: "isSaveHistory", id: "id", readonly: "readonly", color: "color", maxMultiDates: "maxMultiDates" }, outputs: { change: "change", select: "select", selectStart: "selectStart", selectEnd: "selectEnd" }, providers: [MONTH_VALUE_ACCESSOR], ngImport: i0, template: `
+    <div [class]="color">
+      <ng-template [ngIf]="!_isRange" [ngIfElse]="rangeBox">
+        <div class="days-box">
+          <ng-template ngFor let-day [ngForOf]="month?.days" [ngForTrackBy]="trackByTime">
+            <div class="days">
+              <ng-container *ngIf="day">
+                <button type='button'
+                        [class]="'days-btn ' + day.cssClass"
+                        [class.today]="day.isToday"
+                        (click)="onSelected(day)"
+                        [class.marked]="day.marked"
+                        [class.last-month-day]="day.isLastMonth"
+                        [class.next-month-day]="day.isNextMonth"
+                        [class.on-selected]="isSelected(day.time)"
+                        [disabled]="day.disable"
+                        [attr.aria-label]="getDayLabel(day) | date:DAY_DATE_FORMAT">
+                  <p>{{ day.title }}</p>
+                  <small *ngIf="day.subTitle">{{ day?.subTitle }}</small>
+                </button>
+              </ng-container>
+            </div>
+          </ng-template>
+        </div>
+      </ng-template>
+
+      <ng-template #rangeBox>
+        <div class="days-box">
+          <ng-template ngFor let-day [ngForOf]="month.days" [ngForTrackBy]="trackByTime">
+            <div class="days"
+                 [class.startSelection]="isStartSelection(day)"
+                 [class.endSelection]="isEndSelection(day)"
+                 [class.is-first-wrap]="day?.isFirst"
+                 [class.is-last-wrap]="day?.isLast"
+                 [class.between]="isBetween(day)">
+              <ng-container *ngIf="day">
+                <button type='button'
+                        [class]="'days-btn ' + day.cssClass"
+                        [class.today]="day.isToday"
+                        (click)="onSelected(day)"
+                        [class.marked]="day.marked"
+                        [class.last-month-day]="day.isLastMonth"
+                        [class.next-month-day]="day.isNextMonth"
+                        [class.is-first]="day.isFirst"
+                        [class.is-last]="day.isLast"
+                        [class.on-selected]="isSelected(day.time)"
+                        [disabled]="day.disable">               
+                  <p>{{ day.title }}</p>
+                  <small *ngIf="day.subTitle">{{ day?.subTitle }}</small>
+                  <small *ngIf="day.demandLevel" class="day-dot-container">
+                    <div class="day-dot" [ngClass]="{
+                      'day-low': day.demandLevel === 'Low',
+                      'day-medium': day.demandLevel === 'Medium',
+                      'day-high': day.demandLevel === 'High'
+                    }">
+                    </div>
+                  </small>
+                </button>
+              </ng-container>
+
+            </div>
+          </ng-template>
+        </div>
+      </ng-template>
+    </div>
+  `, isInline: true, styles: [":host{display:inline-block;width:100%}:host .days-box{padding:.5rem}:host .days:nth-of-type(7n),:host .days:nth-of-type(7n+1){width:15%}:host .days{width:14%;float:left;text-align:center;height:44px;margin-bottom:5px}:host .days .marked p{font-weight:500}:host .days .on-selected{border:none}:host .days .on-selected p{font-size:1.3em}:host button.days-btn{border-radius:44px;width:44px;display:block;margin:0 auto;padding:0;height:44px;background-color:transparent;position:relative;z-index:2;outline:0}:host button.days-btn p{margin:0;font-size:1.2em;color:#333;text-align:center}:host button.days-btn[disabled] p{color:#00000040}:host button.days-btn.on-selected small{transition:bottom .3s;bottom:3px}:host button.days-btn small{overflow:hidden;display:block;left:0;right:0;bottom:3px;position:absolute;z-index:1;text-align:center;font-weight:200}:host .primary button.days-btn small,:host .primary .days .marked p,:host .primary .days .today p{color:var(--ion-color-primary)}:host .primary .days .today p{font-weight:700}:host .primary .days .today.on-selected p,:host .primary .days .marked.on-selected p{color:#fff}:host .primary .days .on-selected,:host .primary .startSelection button.days-btn,:host .primary .endSelection button.days-btn{background-color:var(--ion-color-primary);color:#fff}:host .primary .endSelection button.days-btn{background-color:var(--ion-color-primary);color:#fff}:host .primary .startSelection{position:relative}:host .primary .startSelection:before,:host .primary .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .primary .startSelection:before{background-color:#6078ee33}:host .primary .startSelection:after{background-color:#fff;opacity:.25}:host .primary .endSelection{position:relative}:host .primary .endSelection:before,:host .primary .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .primary .endSelection:before{background-color:#6078ee33}:host .primary .endSelection:after{background-color:#fff;opacity:.25}:host .primary .startSelection.endSelection:after{background-color:transparent}:host .primary .startSelection button.days-btn{border-top-right-radius:0;border-bottom-right-radius:0}:host .primary .between button.days-btn{background-color:#6078ee33;width:100%;border-radius:0;position:relative}:host .primary .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .primary .between button.days-btn p{color:#363749}:host .primary .endSelection button.days-btn{border-top-left-radius:0;border-bottom-left-radius:0}:host .primary .endSelection button.days-btn p{color:#fff}:host .primary .days.startSelection:nth-child(7n):before,:host .primary .days.between:nth-child(7n) button.days-btn,:host .primary button.days-btn.is-last{border-radius:0 44px 44px 0}:host .primary .days.startSelection:nth-child(7n):before.on-selected,:host .primary .days.between:nth-child(7n) button.days-btn.on-selected,:host .primary button.days-btn.is-last.on-selected{border-radius:50%}:host .primary .days.endSelection:nth-child(7n+1):before,:host .primary .days.between:nth-child(7n+1) button.days-btn,:host .primary .days.between.is-first-wrap button.days-btn.is-first,:host .primary button.days-btn.is-first{border-radius:44px 0 0 44px}:host .primary .startSelection button.days-btn.is-first,:host .primary .endSelection button.days-btn.is-first,:host .primary button.days-btn.is-first.on-selected,:host .primary button.days-btn.is-last.on-selected,:host .primary .startSelection button.days-btn.is-last,:host .primary .endSelection button.days-btn.is-last{border-radius:50%}:host .primary .startSelection.is-last-wrap:before,:host .primary .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .primary .endSelection.is-first-wrap:before,:host .primary .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .primary .days .on-selected p{color:#fff}:host .primary .startSelection button.days-btn,:host .primary .endSelection button.days-btn,:host .primary .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .primary .startSelection.endSelection:before{--ion-color-primary: transparent}:host .secondary button.days-btn small,:host .secondary .days .marked p,:host .secondary .days .today p{color:var(--ion-color-secondary)}:host .secondary .days .today p{font-weight:700}:host .secondary .days .today.on-selected p,:host .secondary .days .marked.on-selected p{color:#fff}:host .secondary .days .on-selected,:host .secondary .startSelection button.days-btn,:host .secondary .endSelection button.days-btn{background-color:var(--ion-color-secondary);color:#fff}:host .secondary .startSelection{position:relative}:host .secondary .startSelection:before,:host .secondary .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .secondary .startSelection:before{background-color:var(--ion-color-secondary)}:host .secondary .startSelection:after{background-color:#fff;opacity:.25}:host .secondary .endSelection{position:relative}:host .secondary .endSelection:before,:host .secondary .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .secondary .endSelection:before{background-color:var(--ion-color-secondary)}:host .secondary .endSelection:after{background-color:#fff;opacity:.25}:host .secondary .startSelection.endSelection:after{background-color:transparent}:host .secondary .startSelection button.days-btn{border-radius:50%}:host .secondary .between button.days-btn{background-color:var(--ion-color-secondary);width:100%;border-radius:0;position:relative}:host .secondary .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .secondary .between button.days-btn p{color:#fff}:host .secondary .endSelection button.days-btn{border-radius:50%}:host .secondary .endSelection button.days-btn p{color:#fff}:host .secondary .days.startSelection:nth-child(7n):before,:host .secondary .days.between:nth-child(7n) button.days-btn,:host .secondary button.days-btn.is-last{border-radius:0 44px 44px 0}:host .secondary .days.startSelection:nth-child(7n):before.on-selected,:host .secondary .days.between:nth-child(7n) button.days-btn.on-selected,:host .secondary button.days-btn.is-last.on-selected{border-radius:50%}:host .secondary .days.endSelection:nth-child(7n+1):before,:host .secondary .days.between:nth-child(7n+1) button.days-btn,:host .secondary .days.between.is-first-wrap button.days-btn.is-first,:host .secondary button.days-btn.is-first{border-radius:44px 0 0 44px}:host .secondary .startSelection button.days-btn.is-first,:host .secondary .endSelection button.days-btn.is-first,:host .secondary button.days-btn.is-first.on-selected,:host .secondary button.days-btn.is-last.on-selected,:host .secondary .startSelection button.days-btn.is-last,:host .secondary .endSelection button.days-btn.is-last{border-radius:50%}:host .secondary .startSelection.is-last-wrap:before,:host .secondary .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .secondary .endSelection.is-first-wrap:before,:host .secondary .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .secondary .days .on-selected p{color:#fff}:host .secondary .startSelection button.days-btn,:host .secondary .endSelection button.days-btn,:host .secondary .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .secondary .startSelection.endSelection:before{--ion-color-primary: transparent}:host .danger button.days-btn small,:host .danger .days .marked p,:host .danger .days .today p{color:var(--ion-color-danger)}:host .danger .days .today p{font-weight:700}:host .danger .days .today.on-selected p,:host .danger .days .marked.on-selected p{color:#fff}:host .danger .days .on-selected,:host .danger .startSelection button.days-btn,:host .danger .endSelection button.days-btn{background-color:var(--ion-color-danger);color:#fff}:host .danger .startSelection{position:relative}:host .danger .startSelection:before,:host .danger .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .danger .startSelection:before{background-color:var(--ion-color-danger)}:host .danger .startSelection:after{background-color:#fff;opacity:.25}:host .danger .endSelection{position:relative}:host .danger .endSelection:before,:host .danger .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .danger .endSelection:before{background-color:var(--ion-color-danger)}:host .danger .endSelection:after{background-color:#fff;opacity:.25}:host .danger .startSelection.endSelection:after{background-color:transparent}:host .danger .startSelection button.days-btn{border-radius:50%}:host .danger .between button.days-btn{background-color:var(--ion-color-danger);width:100%;border-radius:0;position:relative}:host .danger .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .danger .between button.days-btn p{color:#fff}:host .danger .endSelection button.days-btn{border-radius:50%}:host .danger .endSelection button.days-btn p{color:#fff}:host .danger .days.startSelection:nth-child(7n):before,:host .danger .days.between:nth-child(7n) button.days-btn,:host .danger button.days-btn.is-last{border-radius:0 44px 44px 0}:host .danger .days.startSelection:nth-child(7n):before.on-selected,:host .danger .days.between:nth-child(7n) button.days-btn.on-selected,:host .danger button.days-btn.is-last.on-selected{border-radius:50%}:host .danger .days.endSelection:nth-child(7n+1):before,:host .danger .days.between:nth-child(7n+1) button.days-btn,:host .danger .days.between.is-first-wrap button.days-btn.is-first,:host .danger button.days-btn.is-first{border-radius:44px 0 0 44px}:host .danger .startSelection button.days-btn.is-first,:host .danger .endSelection button.days-btn.is-first,:host .danger button.days-btn.is-first.on-selected,:host .danger button.days-btn.is-last.on-selected,:host .danger .startSelection button.days-btn.is-last,:host .danger .endSelection button.days-btn.is-last{border-radius:50%}:host .danger .startSelection.is-last-wrap:before,:host .danger .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .danger .endSelection.is-first-wrap:before,:host .danger .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .danger .days .on-selected p{color:#fff}:host .danger .startSelection button.days-btn,:host .danger .endSelection button.days-btn,:host .danger .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .danger .startSelection.endSelection:before{--ion-color-primary: transparent}:host .dark button.days-btn small,:host .dark .days .marked p,:host .dark .days .today p{color:var(--ion-color-dark)}:host .dark .days .today p{font-weight:700}:host .dark .days .today.on-selected p,:host .dark .days .marked.on-selected p{color:#fff}:host .dark .days .on-selected,:host .dark .startSelection button.days-btn,:host .dark .endSelection button.days-btn{background-color:#45549d!important;color:#fff}:host .dark .startSelection{position:relative}:host .dark .startSelection:before,:host .dark .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}body[data-dark-mode=true] :host .startSelection:before button.days-btn{background-color:#45549d!important}:host .dark .startSelection:after{background-color:#fff;opacity:.25}:host .dark .endSelection{position:relative}:host .dark .endSelection:before,:host .dark .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}body[data-dark-mode=true] :host .endSelection:before{background-color:#45549d!important}:host .dark .endSelection:after{background-color:#fff;opacity:.25}:host .dark .startSelection.endSelection:after{background-color:transparent}:host .dark .startSelection button.days-btn{border-radius:50%}body[data-dark-mode=true] :host .startSelection:before{background-color:#45549d!important}body[data-dark-mode=true] :host .between button.days-btn{background-color:#45549d!important;width:100%;border-radius:0;position:relative}:host .dark .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}body[data-dark-mode=true] :host .between button.days-btn p{color:#fff!important}body[data-dark-mode=true] :host .primary .endSelection:before{background-color:#45549d!important}:host .dark .endSelection button.days-btn{border-radius:50%}:host .dark .endSelection button.days-btn p{color:#fff}:host .dark .days.startSelection:nth-child(7n):before,:host .dark .days.between:nth-child(7n) button.days-btn,:host .dark button.days-btn.is-last{border-radius:0 44px 44px 0}:host .dark .days.startSelection:nth-child(7n):before.on-selected,:host .dark .days.between:nth-child(7n) button.days-btn.on-selected,:host .dark button.days-btn.is-last.on-selected{border-radius:50%}:host .dark .days.endSelection:nth-child(7n+1):before,:host .dark .days.between:nth-child(7n+1) button.days-btn,:host .dark .days.between.is-first-wrap button.days-btn.is-first,:host .dark button.days-btn.is-first{border-radius:44px 0 0 44px}:host .dark .startSelection button.days-btn.is-first,:host .dark .endSelection button.days-btn.is-first,:host .dark button.days-btn.is-first.on-selected,:host .dark button.days-btn.is-last.on-selected,:host .dark .startSelection button.days-btn.is-last,:host .dark .endSelection button.days-btn.is-last{border-radius:50%}:host .dark .startSelection.is-last-wrap:before,:host .dark .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .dark .endSelection.is-first-wrap:before,:host .dark .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .dark .days .on-selected p{color:#fff}:host .dark .startSelection button.days-btn,:host .dark .endSelection button.days-btn,:host .dark .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .dark .startSelection.endSelection:before{--ion-color-primary: transparent}:host .light button.days-btn small,:host .light .days .marked p,:host .light .days .today p{color:var(--ion-color-light)}:host .light .days .today p{font-weight:700}:host .light .days .today.on-selected p,:host .light .days .marked.on-selected p{color:#a0a0a0}:host .light .days .on-selected,:host .light .startSelection button.days-btn,:host .light .endSelection button.days-btn{background-color:var(--ion-color-light);color:#a0a0a0}:host .light .startSelection{position:relative}:host .light .startSelection:before,:host .light .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .light .startSelection:before{background-color:#f2c666}:host .light .startSelection:after{background-color:#fff;opacity:.25}:host .light .endSelection{position:relative}:host .light .endSelection:before,:host .light .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .light .endSelection:before{background-color:var(--ion-color-light)}:host .light .endSelection:after{background-color:#fff;opacity:.25}:host .light .startSelection.endSelection:after{background-color:transparent}:host .light .startSelection button.days-btn{border-radius:50%}:host .light .between button.days-btn{background-color:var(--ion-color-light);width:100%;border-radius:0;position:relative}:host .light .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .light .between button.days-btn p{color:#a0a0a0}:host .light .endSelection button.days-btn{border-radius:50%}:host .light .endSelection button.days-btn p{color:#a0a0a0}:host .light .days.startSelection:nth-child(7n):before,:host .light .days.between:nth-child(7n) button.days-btn,:host .light button.days-btn.is-last{border-radius:0 44px 44px 0}:host .light .days.startSelection:nth-child(7n):before.on-selected,:host .light .days.between:nth-child(7n) button.days-btn.on-selected,:host .light button.days-btn.is-last.on-selected{border-radius:50%}:host .light .days.endSelection:nth-child(7n+1):before,:host .light .days.between:nth-child(7n+1) button.days-btn,:host .light .days.between.is-first-wrap button.days-btn.is-first,:host .light button.days-btn.is-first{border-radius:44px 0 0 44px}:host .light .startSelection button.days-btn.is-first,:host .light .endSelection button.days-btn.is-first,:host .light button.days-btn.is-first.on-selected,:host .light button.days-btn.is-last.on-selected,:host .light .startSelection button.days-btn.is-last,:host .light .endSelection button.days-btn.is-last{border-radius:50%}:host .light .startSelection.is-last-wrap:before,:host .light .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .light .endSelection.is-first-wrap:before,:host .light .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .light .days .on-selected p{color:#a0a0a0}:host .light .startSelection button.days-btn,:host .light .endSelection button.days-btn,:host .light .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .light .startSelection.endSelection:before{--ion-color-primary: transparent}:host .light .days .today p{color:#565656}:host .cal-color .days .today p{font-weight:700}:host .cal-color .days .today.on-selected p,:host .cal-color .days .marked.on-selected p{color:#fff}:host .cal-color .days .on-selected,:host .cal-color .startSelection button.days-btn,:host .cal-color .endSelection button.days-btn{color:#fff}:host .cal-color .startSelection{position:relative}:host .cal-color .startSelection:before,:host .cal-color .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .cal-color .startSelection:after{background-color:#fff;opacity:.25}:host .cal-color .endSelection{position:relative}:host .cal-color .endSelection:before,:host .cal-color .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .cal-color .endSelection:after{background-color:#fff;opacity:.25}:host .cal-color .startSelection.endSelection:after{background-color:transparent}:host .cal-color .startSelection button.days-btn{border-radius:50%}:host .cal-color .between button.days-btn{width:100%;border-radius:0;position:relative}:host .cal-color .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .cal-color .between button.days-btn p{color:#fff}:host .cal-color .endSelection button.days-btn{border-radius:50%}:host .cal-color .endSelection button.days-btn p{color:#fff}:host .cal-color .days.startSelection:nth-child(7n):before,:host .cal-color .days.between:nth-child(7n) button.days-btn,:host .cal-color button.days-btn.is-last{border-radius:0 44px 44px 0}:host .cal-color .days.startSelection:nth-child(7n):before.on-selected,:host .cal-color .days.between:nth-child(7n) button.days-btn.on-selected,:host .cal-color button.days-btn.is-last.on-selected{border-radius:50%}:host .cal-color .days.endSelection:nth-child(7n+1):before,:host .cal-color .days.between:nth-child(7n+1) button.days-btn,:host .cal-color .days.between.is-first-wrap button.days-btn.is-first,:host .cal-color button.days-btn.is-first{border-radius:44px 0 0 44px}:host .cal-color .startSelection button.days-btn.is-first,:host .cal-color .endSelection button.days-btn.is-first,:host .cal-color button.days-btn.is-first.on-selected,:host .cal-color button.days-btn.is-last.on-selected,:host .cal-color .startSelection button.days-btn.is-last,:host .cal-color .endSelection button.days-btn.is-last{border-radius:50%}:host .cal-color .startSelection.is-last-wrap:before,:host .cal-color .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .cal-color .endSelection.is-first-wrap:before,:host .cal-color .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .cal-color .days .on-selected p{color:#fff}:host .cal-color .startSelection button.days-btn,:host .cal-color .endSelection button.days-btn,:host .cal-color .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .cal-color .startSelection.endSelection:before{--ion-color-primary: transparent}body[data-dark-mode=true] :host button.days-btn p{color:#fff}body[data-dark-mode=true] :host button.days-btn[disabled] p{color:#ffffff80}:host .day-dot-container{display:flex!important;justify-content:center}:host .day-dot{width:5px;height:5px;border-radius:50%}:host .day-low{background-color:#6cd395!important}:host .day-medium{background-color:#f2c666!important}:host .day-high{background-color:#f58787!important}.today-label{font-size:.7rem!important}.not-today{padding-top:.7rem!important}\n"], dependencies: [{ kind: "directive", type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "pipe", type: i1.DatePipe, name: "date" }] }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MonthComponent, [{
-        type: Component,
-        args: [{ selector: 'ion-calendar-month', providers: [MONTH_VALUE_ACCESSOR], template: `
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MonthComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'ion-calendar-month', providers: [MONTH_VALUE_ACCESSOR], template: `
     <div [class]="color">
       <ng-template [ngIf]="!_isRange" [ngIfElse]="rangeBox">
         <div class="days-box">
@@ -665,111 +591,30 @@ class MonthComponent {
       </ng-template>
     </div>
   `, styles: [":host{display:inline-block;width:100%}:host .days-box{padding:.5rem}:host .days:nth-of-type(7n),:host .days:nth-of-type(7n+1){width:15%}:host .days{width:14%;float:left;text-align:center;height:44px;margin-bottom:5px}:host .days .marked p{font-weight:500}:host .days .on-selected{border:none}:host .days .on-selected p{font-size:1.3em}:host button.days-btn{border-radius:44px;width:44px;display:block;margin:0 auto;padding:0;height:44px;background-color:transparent;position:relative;z-index:2;outline:0}:host button.days-btn p{margin:0;font-size:1.2em;color:#333;text-align:center}:host button.days-btn[disabled] p{color:#00000040}:host button.days-btn.on-selected small{transition:bottom .3s;bottom:3px}:host button.days-btn small{overflow:hidden;display:block;left:0;right:0;bottom:3px;position:absolute;z-index:1;text-align:center;font-weight:200}:host .primary button.days-btn small,:host .primary .days .marked p,:host .primary .days .today p{color:var(--ion-color-primary)}:host .primary .days .today p{font-weight:700}:host .primary .days .today.on-selected p,:host .primary .days .marked.on-selected p{color:#fff}:host .primary .days .on-selected,:host .primary .startSelection button.days-btn,:host .primary .endSelection button.days-btn{background-color:var(--ion-color-primary);color:#fff}:host .primary .endSelection button.days-btn{background-color:var(--ion-color-primary);color:#fff}:host .primary .startSelection{position:relative}:host .primary .startSelection:before,:host .primary .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .primary .startSelection:before{background-color:#6078ee33}:host .primary .startSelection:after{background-color:#fff;opacity:.25}:host .primary .endSelection{position:relative}:host .primary .endSelection:before,:host .primary .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .primary .endSelection:before{background-color:#6078ee33}:host .primary .endSelection:after{background-color:#fff;opacity:.25}:host .primary .startSelection.endSelection:after{background-color:transparent}:host .primary .startSelection button.days-btn{border-top-right-radius:0;border-bottom-right-radius:0}:host .primary .between button.days-btn{background-color:#6078ee33;width:100%;border-radius:0;position:relative}:host .primary .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .primary .between button.days-btn p{color:#363749}:host .primary .endSelection button.days-btn{border-top-left-radius:0;border-bottom-left-radius:0}:host .primary .endSelection button.days-btn p{color:#fff}:host .primary .days.startSelection:nth-child(7n):before,:host .primary .days.between:nth-child(7n) button.days-btn,:host .primary button.days-btn.is-last{border-radius:0 44px 44px 0}:host .primary .days.startSelection:nth-child(7n):before.on-selected,:host .primary .days.between:nth-child(7n) button.days-btn.on-selected,:host .primary button.days-btn.is-last.on-selected{border-radius:50%}:host .primary .days.endSelection:nth-child(7n+1):before,:host .primary .days.between:nth-child(7n+1) button.days-btn,:host .primary .days.between.is-first-wrap button.days-btn.is-first,:host .primary button.days-btn.is-first{border-radius:44px 0 0 44px}:host .primary .startSelection button.days-btn.is-first,:host .primary .endSelection button.days-btn.is-first,:host .primary button.days-btn.is-first.on-selected,:host .primary button.days-btn.is-last.on-selected,:host .primary .startSelection button.days-btn.is-last,:host .primary .endSelection button.days-btn.is-last{border-radius:50%}:host .primary .startSelection.is-last-wrap:before,:host .primary .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .primary .endSelection.is-first-wrap:before,:host .primary .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .primary .days .on-selected p{color:#fff}:host .primary .startSelection button.days-btn,:host .primary .endSelection button.days-btn,:host .primary .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .primary .startSelection.endSelection:before{--ion-color-primary: transparent}:host .secondary button.days-btn small,:host .secondary .days .marked p,:host .secondary .days .today p{color:var(--ion-color-secondary)}:host .secondary .days .today p{font-weight:700}:host .secondary .days .today.on-selected p,:host .secondary .days .marked.on-selected p{color:#fff}:host .secondary .days .on-selected,:host .secondary .startSelection button.days-btn,:host .secondary .endSelection button.days-btn{background-color:var(--ion-color-secondary);color:#fff}:host .secondary .startSelection{position:relative}:host .secondary .startSelection:before,:host .secondary .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .secondary .startSelection:before{background-color:var(--ion-color-secondary)}:host .secondary .startSelection:after{background-color:#fff;opacity:.25}:host .secondary .endSelection{position:relative}:host .secondary .endSelection:before,:host .secondary .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .secondary .endSelection:before{background-color:var(--ion-color-secondary)}:host .secondary .endSelection:after{background-color:#fff;opacity:.25}:host .secondary .startSelection.endSelection:after{background-color:transparent}:host .secondary .startSelection button.days-btn{border-radius:50%}:host .secondary .between button.days-btn{background-color:var(--ion-color-secondary);width:100%;border-radius:0;position:relative}:host .secondary .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .secondary .between button.days-btn p{color:#fff}:host .secondary .endSelection button.days-btn{border-radius:50%}:host .secondary .endSelection button.days-btn p{color:#fff}:host .secondary .days.startSelection:nth-child(7n):before,:host .secondary .days.between:nth-child(7n) button.days-btn,:host .secondary button.days-btn.is-last{border-radius:0 44px 44px 0}:host .secondary .days.startSelection:nth-child(7n):before.on-selected,:host .secondary .days.between:nth-child(7n) button.days-btn.on-selected,:host .secondary button.days-btn.is-last.on-selected{border-radius:50%}:host .secondary .days.endSelection:nth-child(7n+1):before,:host .secondary .days.between:nth-child(7n+1) button.days-btn,:host .secondary .days.between.is-first-wrap button.days-btn.is-first,:host .secondary button.days-btn.is-first{border-radius:44px 0 0 44px}:host .secondary .startSelection button.days-btn.is-first,:host .secondary .endSelection button.days-btn.is-first,:host .secondary button.days-btn.is-first.on-selected,:host .secondary button.days-btn.is-last.on-selected,:host .secondary .startSelection button.days-btn.is-last,:host .secondary .endSelection button.days-btn.is-last{border-radius:50%}:host .secondary .startSelection.is-last-wrap:before,:host .secondary .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .secondary .endSelection.is-first-wrap:before,:host .secondary .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .secondary .days .on-selected p{color:#fff}:host .secondary .startSelection button.days-btn,:host .secondary .endSelection button.days-btn,:host .secondary .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .secondary .startSelection.endSelection:before{--ion-color-primary: transparent}:host .danger button.days-btn small,:host .danger .days .marked p,:host .danger .days .today p{color:var(--ion-color-danger)}:host .danger .days .today p{font-weight:700}:host .danger .days .today.on-selected p,:host .danger .days .marked.on-selected p{color:#fff}:host .danger .days .on-selected,:host .danger .startSelection button.days-btn,:host .danger .endSelection button.days-btn{background-color:var(--ion-color-danger);color:#fff}:host .danger .startSelection{position:relative}:host .danger .startSelection:before,:host .danger .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .danger .startSelection:before{background-color:var(--ion-color-danger)}:host .danger .startSelection:after{background-color:#fff;opacity:.25}:host .danger .endSelection{position:relative}:host .danger .endSelection:before,:host .danger .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .danger .endSelection:before{background-color:var(--ion-color-danger)}:host .danger .endSelection:after{background-color:#fff;opacity:.25}:host .danger .startSelection.endSelection:after{background-color:transparent}:host .danger .startSelection button.days-btn{border-radius:50%}:host .danger .between button.days-btn{background-color:var(--ion-color-danger);width:100%;border-radius:0;position:relative}:host .danger .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .danger .between button.days-btn p{color:#fff}:host .danger .endSelection button.days-btn{border-radius:50%}:host .danger .endSelection button.days-btn p{color:#fff}:host .danger .days.startSelection:nth-child(7n):before,:host .danger .days.between:nth-child(7n) button.days-btn,:host .danger button.days-btn.is-last{border-radius:0 44px 44px 0}:host .danger .days.startSelection:nth-child(7n):before.on-selected,:host .danger .days.between:nth-child(7n) button.days-btn.on-selected,:host .danger button.days-btn.is-last.on-selected{border-radius:50%}:host .danger .days.endSelection:nth-child(7n+1):before,:host .danger .days.between:nth-child(7n+1) button.days-btn,:host .danger .days.between.is-first-wrap button.days-btn.is-first,:host .danger button.days-btn.is-first{border-radius:44px 0 0 44px}:host .danger .startSelection button.days-btn.is-first,:host .danger .endSelection button.days-btn.is-first,:host .danger button.days-btn.is-first.on-selected,:host .danger button.days-btn.is-last.on-selected,:host .danger .startSelection button.days-btn.is-last,:host .danger .endSelection button.days-btn.is-last{border-radius:50%}:host .danger .startSelection.is-last-wrap:before,:host .danger .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .danger .endSelection.is-first-wrap:before,:host .danger .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .danger .days .on-selected p{color:#fff}:host .danger .startSelection button.days-btn,:host .danger .endSelection button.days-btn,:host .danger .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .danger .startSelection.endSelection:before{--ion-color-primary: transparent}:host .dark button.days-btn small,:host .dark .days .marked p,:host .dark .days .today p{color:var(--ion-color-dark)}:host .dark .days .today p{font-weight:700}:host .dark .days .today.on-selected p,:host .dark .days .marked.on-selected p{color:#fff}:host .dark .days .on-selected,:host .dark .startSelection button.days-btn,:host .dark .endSelection button.days-btn{background-color:#45549d!important;color:#fff}:host .dark .startSelection{position:relative}:host .dark .startSelection:before,:host .dark .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}body[data-dark-mode=true] :host .startSelection:before button.days-btn{background-color:#45549d!important}:host .dark .startSelection:after{background-color:#fff;opacity:.25}:host .dark .endSelection{position:relative}:host .dark .endSelection:before,:host .dark .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}body[data-dark-mode=true] :host .endSelection:before{background-color:#45549d!important}:host .dark .endSelection:after{background-color:#fff;opacity:.25}:host .dark .startSelection.endSelection:after{background-color:transparent}:host .dark .startSelection button.days-btn{border-radius:50%}body[data-dark-mode=true] :host .startSelection:before{background-color:#45549d!important}body[data-dark-mode=true] :host .between button.days-btn{background-color:#45549d!important;width:100%;border-radius:0;position:relative}:host .dark .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}body[data-dark-mode=true] :host .between button.days-btn p{color:#fff!important}body[data-dark-mode=true] :host .primary .endSelection:before{background-color:#45549d!important}:host .dark .endSelection button.days-btn{border-radius:50%}:host .dark .endSelection button.days-btn p{color:#fff}:host .dark .days.startSelection:nth-child(7n):before,:host .dark .days.between:nth-child(7n) button.days-btn,:host .dark button.days-btn.is-last{border-radius:0 44px 44px 0}:host .dark .days.startSelection:nth-child(7n):before.on-selected,:host .dark .days.between:nth-child(7n) button.days-btn.on-selected,:host .dark button.days-btn.is-last.on-selected{border-radius:50%}:host .dark .days.endSelection:nth-child(7n+1):before,:host .dark .days.between:nth-child(7n+1) button.days-btn,:host .dark .days.between.is-first-wrap button.days-btn.is-first,:host .dark button.days-btn.is-first{border-radius:44px 0 0 44px}:host .dark .startSelection button.days-btn.is-first,:host .dark .endSelection button.days-btn.is-first,:host .dark button.days-btn.is-first.on-selected,:host .dark button.days-btn.is-last.on-selected,:host .dark .startSelection button.days-btn.is-last,:host .dark .endSelection button.days-btn.is-last{border-radius:50%}:host .dark .startSelection.is-last-wrap:before,:host .dark .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .dark .endSelection.is-first-wrap:before,:host .dark .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .dark .days .on-selected p{color:#fff}:host .dark .startSelection button.days-btn,:host .dark .endSelection button.days-btn,:host .dark .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .dark .startSelection.endSelection:before{--ion-color-primary: transparent}:host .light button.days-btn small,:host .light .days .marked p,:host .light .days .today p{color:var(--ion-color-light)}:host .light .days .today p{font-weight:700}:host .light .days .today.on-selected p,:host .light .days .marked.on-selected p{color:#a0a0a0}:host .light .days .on-selected,:host .light .startSelection button.days-btn,:host .light .endSelection button.days-btn{background-color:var(--ion-color-light);color:#a0a0a0}:host .light .startSelection{position:relative}:host .light .startSelection:before,:host .light .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .light .startSelection:before{background-color:#f2c666}:host .light .startSelection:after{background-color:#fff;opacity:.25}:host .light .endSelection{position:relative}:host .light .endSelection:before,:host .light .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .light .endSelection:before{background-color:var(--ion-color-light)}:host .light .endSelection:after{background-color:#fff;opacity:.25}:host .light .startSelection.endSelection:after{background-color:transparent}:host .light .startSelection button.days-btn{border-radius:50%}:host .light .between button.days-btn{background-color:var(--ion-color-light);width:100%;border-radius:0;position:relative}:host .light .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .light .between button.days-btn p{color:#a0a0a0}:host .light .endSelection button.days-btn{border-radius:50%}:host .light .endSelection button.days-btn p{color:#a0a0a0}:host .light .days.startSelection:nth-child(7n):before,:host .light .days.between:nth-child(7n) button.days-btn,:host .light button.days-btn.is-last{border-radius:0 44px 44px 0}:host .light .days.startSelection:nth-child(7n):before.on-selected,:host .light .days.between:nth-child(7n) button.days-btn.on-selected,:host .light button.days-btn.is-last.on-selected{border-radius:50%}:host .light .days.endSelection:nth-child(7n+1):before,:host .light .days.between:nth-child(7n+1) button.days-btn,:host .light .days.between.is-first-wrap button.days-btn.is-first,:host .light button.days-btn.is-first{border-radius:44px 0 0 44px}:host .light .startSelection button.days-btn.is-first,:host .light .endSelection button.days-btn.is-first,:host .light button.days-btn.is-first.on-selected,:host .light button.days-btn.is-last.on-selected,:host .light .startSelection button.days-btn.is-last,:host .light .endSelection button.days-btn.is-last{border-radius:50%}:host .light .startSelection.is-last-wrap:before,:host .light .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .light .endSelection.is-first-wrap:before,:host .light .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .light .days .on-selected p{color:#a0a0a0}:host .light .startSelection button.days-btn,:host .light .endSelection button.days-btn,:host .light .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .light .startSelection.endSelection:before{--ion-color-primary: transparent}:host .light .days .today p{color:#565656}:host .cal-color .days .today p{font-weight:700}:host .cal-color .days .today.on-selected p,:host .cal-color .days .marked.on-selected p{color:#fff}:host .cal-color .days .on-selected,:host .cal-color .startSelection button.days-btn,:host .cal-color .endSelection button.days-btn{color:#fff}:host .cal-color .startSelection{position:relative}:host .cal-color .startSelection:before,:host .cal-color .startSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;right:0;display:block}:host .cal-color .startSelection:after{background-color:#fff;opacity:.25}:host .cal-color .endSelection{position:relative}:host .cal-color .endSelection:before,:host .cal-color .endSelection:after{height:44px;width:50%;content:\"\";position:absolute;top:0;left:0;display:block}:host .cal-color .endSelection:after{background-color:#fff;opacity:.25}:host .cal-color .startSelection.endSelection:after{background-color:transparent}:host .cal-color .startSelection button.days-btn{border-radius:50%}:host .cal-color .between button.days-btn{width:100%;border-radius:0;position:relative}:host .cal-color .between button.days-btn:after{height:44px;width:100%;content:\"\";position:absolute;top:0;left:0;right:0;display:block;background-color:#fff;opacity:.25}:host .cal-color .between button.days-btn p{color:#fff}:host .cal-color .endSelection button.days-btn{border-radius:50%}:host .cal-color .endSelection button.days-btn p{color:#fff}:host .cal-color .days.startSelection:nth-child(7n):before,:host .cal-color .days.between:nth-child(7n) button.days-btn,:host .cal-color button.days-btn.is-last{border-radius:0 44px 44px 0}:host .cal-color .days.startSelection:nth-child(7n):before.on-selected,:host .cal-color .days.between:nth-child(7n) button.days-btn.on-selected,:host .cal-color button.days-btn.is-last.on-selected{border-radius:50%}:host .cal-color .days.endSelection:nth-child(7n+1):before,:host .cal-color .days.between:nth-child(7n+1) button.days-btn,:host .cal-color .days.between.is-first-wrap button.days-btn.is-first,:host .cal-color button.days-btn.is-first{border-radius:44px 0 0 44px}:host .cal-color .startSelection button.days-btn.is-first,:host .cal-color .endSelection button.days-btn.is-first,:host .cal-color button.days-btn.is-first.on-selected,:host .cal-color button.days-btn.is-last.on-selected,:host .cal-color .startSelection button.days-btn.is-last,:host .cal-color .endSelection button.days-btn.is-last{border-radius:50%}:host .cal-color .startSelection.is-last-wrap:before,:host .cal-color .startSelection.is-last-wrap:after{border-radius:0 44px 44px 0}:host .cal-color .endSelection.is-first-wrap:before,:host .cal-color .endSelection.is-first-wrap:after{border-radius:44px 0 0 44px}:host .cal-color .days .on-selected p{color:#fff}:host .cal-color .startSelection button.days-btn,:host .cal-color .endSelection button.days-btn,:host .cal-color .between button.days-btn{-webkit-transition-property:background-color;-moz-transition-property:background-color;-ms-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:.18s;-moz-transition-duration:.18s;-ms-transition-duration:.18s;-o-transition-duration:.18s;transition-duration:.18s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}:host .cal-color .startSelection.endSelection:before{--ion-color-primary: transparent}body[data-dark-mode=true] :host button.days-btn p{color:#fff}body[data-dark-mode=true] :host button.days-btn[disabled] p{color:#ffffff80}:host .day-dot-container{display:flex!important;justify-content:center}:host .day-dot{width:5px;height:5px;border-radius:50%}:host .day-low{background-color:#6cd395!important}:host .day-medium{background-color:#f2c666!important}:host .day-high{background-color:#f58787!important}.today-label{font-size:.7rem!important}.not-today{padding-top:.7rem!important}\n"] }]
-    }], () => [{ type: i0.ChangeDetectorRef }], { month: [{
-            type: Input
-        }], pickMode: [{
-            type: Input
-        }], isSaveHistory: [{
-            type: Input
-        }], id: [{
-            type: Input
-        }], readonly: [{
-            type: Input
-        }], color: [{
-            type: Input
-        }], maxMultiDates: [{
-            type: Input
-        }], change: [{
-            type: Output
-        }], select: [{
-            type: Output
-        }], selectStart: [{
-            type: Output
-        }], selectEnd: [{
-            type: Output
-        }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(MonthComponent, { className: "MonthComponent" }); })();
+        }], ctorParameters: () => [{ type: i0.ChangeDetectorRef }], propDecorators: { month: [{
+                type: Input
+            }], pickMode: [{
+                type: Input
+            }], isSaveHistory: [{
+                type: Input
+            }], id: [{
+                type: Input
+            }], readonly: [{
+                type: Input
+            }], color: [{
+                type: Input
+            }], maxMultiDates: [{
+                type: Input
+            }], change: [{
+                type: Output
+            }], select: [{
+                type: Output
+            }], selectStart: [{
+                type: Output
+            }], selectEnd: [{
+                type: Output
+            }] } });
 
-const _c0$2 = ["months"];
-const _c1$1 = [[["", "sub-header", ""]]];
-const _c2$1 = ["[sub-header]"];
-const _c3$1 = a0 => ({ "multi-selection": a0 });
-function CalendarModal_span_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "span");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(ctx_r1._d.closeLabel);
-} }
-function CalendarModal_ion_icon_5_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "ion-icon", 11);
-} }
-function CalendarModal_ion_row_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "ion-row", 12)(1, "ion-col", 13);
-    i0.ɵɵtext(2);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "ion-col", 14);
-    i0.ɵɵelement(4, "ion-icon", 15);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(5, "ion-col", 16);
-    i0.ɵɵtext(6);
-    i0.ɵɵelementEnd()();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵclassMap("dates-toolbar");
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", ctx_r1._getDayFormatted(ctx_r1.datesTemp[0]) || "Start Date", " ");
-    i0.ɵɵadvance(4);
-    i0.ɵɵtextInterpolate1(" ", ctx_r1._getDayFormatted(ctx_r1.datesTemp[1]) || "End Date", " ");
-} }
-function CalendarModal_ng_template_14_Template(rf, ctx) { if (rf & 1) {
-    const _r3 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 17)(1, "h4", 18);
-    i0.ɵɵtext(2);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "ion-calendar-month", 19);
-    i0.ɵɵlistener("change", function CalendarModal_ng_template_14_Template_ion_calendar_month_change_3_listener($event) { i0.ɵɵrestoreView(_r3); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.onChange($event)); });
-    i0.ɵɵtwoWayListener("ngModelChange", function CalendarModal_ng_template_14_Template_ion_calendar_month_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r3); const ctx_r1 = i0.ɵɵnextContext(); i0.ɵɵtwoWayBindingSet(ctx_r1.datesTemp, $event) || (ctx_r1.datesTemp = $event); return i0.ɵɵresetView($event); });
-    i0.ɵɵelementEnd()();
-} if (rf & 2) {
-    const month_r4 = ctx.$implicit;
-    const i_r5 = ctx.index;
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵattribute("id", "month-" + i_r5);
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(ctx_r1._monthFormat(month_r4.original == null ? null : month_r4.original.date));
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("month", month_r4)("pickMode", ctx_r1._d.pickMode)("isSaveHistory", ctx_r1._d.isSaveHistory)("id", ctx_r1._d.id)("color", ctx_r1._d.color)("maxMultiDates", ctx_r1._d.maxMultiDates);
-    i0.ɵɵtwoWayProperty("ngModel", ctx_r1.datesTemp);
-} }
-function CalendarModal_ion_button_18_span_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "span");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext(2);
-    i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(ctx_r1._d.doneLabel);
-} }
-function CalendarModal_ion_button_18_ion_icon_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "ion-icon", 22);
-} }
-function CalendarModal_ion_button_18_Template(rf, ctx) { if (rf & 1) {
-    const _r6 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "ion-button", 20);
-    i0.ɵɵlistener("click", function CalendarModal_ion_button_18_Template_ion_button_click_0_listener() { i0.ɵɵrestoreView(_r6); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.done()); });
-    i0.ɵɵtemplate(1, CalendarModal_ion_button_18_span_1_Template, 2, 1, "span", 3)(2, CalendarModal_ion_button_18_ion_icon_2_Template, 1, 0, "ion-icon", 21);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("disabled", !ctx_r1.canDone());
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", ctx_r1._d.doneLabel !== "" && !ctx_r1._d.doneIcon);
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", ctx_r1._d.doneIcon);
-} }
 const NUM_OF_MONTHS_TO_CREATE$1 = 3;
 class CalendarModal {
     constructor(_renderer, _elementRef, modalCtrl, ref, calSvc) {
@@ -979,64 +824,82 @@ class CalendarModal {
     trackByIndex(index, momentDate) {
         return momentDate.original ? momentDate.original.time : index;
     }
-    static { this.ɵfac = function CalendarModal_Factory(t) { return new (t || CalendarModal)(i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1$1.ModalController), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(CalendarService)); }; }
-    static { this.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CalendarModal, selectors: [["ion-calendar-modal"]], viewQuery: function CalendarModal_Query(rf, ctx) { if (rf & 1) {
-            i0.ɵɵviewQuery(IonContent, 7);
-            i0.ɵɵviewQuery(_c0$2, 7);
-        } if (rf & 2) {
-            let _t;
-            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.content = _t.first);
-            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.monthsEle = _t.first);
-        } }, hostVars: 2, hostBindings: function CalendarModal_HostBindings(rf, ctx) { if (rf & 2) {
-            i0.ɵɵclassProp("ion-page", ctx.ionPage);
-        } }, inputs: { options: "options" }, ngContentSelectors: _c2$1, decls: 19, vars: 14, consts: [["months", ""], ["slot", "secondary"], ["type", "button", "slot", "icon-only", "fill", "clear", 1, "primary", 3, "click"], [4, "ngIf"], ["name", "close", 4, "ngIf"], ["lines", "none", "no-border", "", 3, "class", 4, "ngIf"], [3, "color", "weekArray", "weekStart"], [1, "calendar-page", 3, "ionScroll", "scrollEvents", "ngClass"], ["ngFor", "", 3, "ngForOf", "ngForTrackBy"], ["threshold", "25%", 3, "ionInfinite"], ["expand", "full", 3, "disabled", "click", 4, "ngIf"], ["name", "close"], ["lines", "none", "no-border", ""], ["size", "4", 1, "start-date", "ion-text-nowrap"], ["size", "4", 1, "ion-text-center"], ["name", "arrow-forward-outline"], ["size", "4", 1, "end-date", "ion-text-right", "ion-text-nowrap"], [1, "month-box"], [1, "month-title"], [3, "change", "ngModelChange", "month", "pickMode", "isSaveHistory", "id", "color", "maxMultiDates", "ngModel"], ["expand", "full", 3, "click", "disabled"], ["name", "checkmark", 4, "ngIf"], ["name", "checkmark"]], template: function CalendarModal_Template(rf, ctx) { if (rf & 1) {
-            const _r1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵprojectionDef(_c1$1);
-            i0.ɵɵelementStart(0, "ion-header")(1, "ion-toolbar")(2, "ion-buttons", 1)(3, "ion-button", 2);
-            i0.ɵɵlistener("click", function CalendarModal_Template_ion_button_click_3_listener() { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.onCancel()); });
-            i0.ɵɵtemplate(4, CalendarModal_span_4_Template, 2, 1, "span", 3)(5, CalendarModal_ion_icon_5_Template, 1, 0, "ion-icon", 4);
-            i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(6, "ion-title");
-            i0.ɵɵtext(7);
-            i0.ɵɵelementEnd()();
-            i0.ɵɵprojection(8);
-            i0.ɵɵtemplate(9, CalendarModal_ion_row_9_Template, 7, 4, "ion-row", 5);
-            i0.ɵɵelement(10, "ion-calendar-week", 6);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(11, "ion-content", 7);
-            i0.ɵɵlistener("ionScroll", function CalendarModal_Template_ion_content_ionScroll_11_listener($event) { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.onScroll($event)); });
-            i0.ɵɵelementStart(12, "div", null, 0);
-            i0.ɵɵtemplate(14, CalendarModal_ng_template_14_Template, 4, 9, "ng-template", 8);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(15, "ion-infinite-scroll", 9);
-            i0.ɵɵlistener("ionInfinite", function CalendarModal_Template_ion_infinite_scroll_ionInfinite_15_listener($event) { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.nextMonth($event)); });
-            i0.ɵɵelement(16, "ion-infinite-scroll-content");
-            i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(17, "ion-footer");
-            i0.ɵɵtemplate(18, CalendarModal_ion_button_18_Template, 3, 3, "ion-button", 10);
-            i0.ɵɵelementEnd();
-        } if (rf & 2) {
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("ngIf", ctx._d.closeLabel !== "" && !ctx._d.closeIcon);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", ctx._d.closeIcon);
-            i0.ɵɵadvance(2);
-            i0.ɵɵtextInterpolate(ctx._d.title);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngIf", ctx._d.pickMode === "range");
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("color", ctx._d.color)("weekArray", ctx._d.weekdays)("weekStart", ctx._d.weekStart);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("scrollEvents", true)("ngClass", i0.ɵɵpureFunction1(12, _c3$1, ctx._d.pickMode === "multi"));
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("ngForOf", ctx.calendarMonths)("ngForTrackBy", ctx.trackByIndex);
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("ngIf", !ctx._d.autoDone);
-        } }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1$1.IonButton, i1$1.IonButtons, i1$1.IonCol, i1$1.IonContent, i1$1.IonFooter, i1$1.IonHeader, i1$1.IonIcon, i1$1.IonInfiniteScroll, i1$1.IonInfiniteScrollContent, i1$1.IonRow, i1$1.IonTitle, i1$1.IonToolbar, i4.NgControlStatus, i4.NgModel, CalendarWeekComponent, MonthComponent], styles: ["[_nghost-%COMP%]   ion-select[_ngcontent-%COMP%]{max-width:unset}[_nghost-%COMP%]   ion-select[_ngcontent-%COMP%]   .select-icon[_ngcontent-%COMP%] > .select-icon-inner[_ngcontent-%COMP%], [_nghost-%COMP%]   ion-select[_ngcontent-%COMP%]   .select-text[_ngcontent-%COMP%]{color:#fff!important}[_nghost-%COMP%]   ion-select.select-ios[_ngcontent-%COMP%]{max-width:unset}[_nghost-%COMP%]   ion-toolbar[_ngcontent-%COMP%]   ion-button.md[_ngcontent-%COMP%]{color:var(--ion-color-primary)}[_nghost-%COMP%]   .dates-toolbar[_ngcontent-%COMP%]{--background: transparent;padding:0 1rem}[_nghost-%COMP%]   .dates-toolbar.primary[_ngcontent-%COMP%]{--background: var(--ion-color-primary)}[_nghost-%COMP%]   .dates-toolbar.secondary[_ngcontent-%COMP%]{--background: var(--ion-color-secondary)}[_nghost-%COMP%]   .dates-toolbar.danger[_ngcontent-%COMP%]{--background: var(--ion-color-danger)}[_nghost-%COMP%]   .dates-toolbar.dark[_ngcontent-%COMP%]{--background: var(--ion-color-dark)}[_nghost-%COMP%]   .dates-toolbar.light[_ngcontent-%COMP%]{--background: var(--ion-color-light)}[_nghost-%COMP%]   .dates-toolbar.transparent[_ngcontent-%COMP%]{--background: transparent}[_nghost-%COMP%]   .dates-toolbar.toolbar-md[_ngcontent-%COMP%]{min-height:44px}[_nghost-%COMP%]   .ios.dates-toolbar[_ngcontent-%COMP%]{padding-top:1rem}[_nghost-%COMP%]   .start-date[_ngcontent-%COMP%]{padding-left:.5rem}[_nghost-%COMP%]   .end-date[_ngcontent-%COMP%]{margin-right:-.5rem}[_nghost-%COMP%]   .calendar-page[_ngcontent-%COMP%]{background-color:#fbfbfb}[_nghost-%COMP%]   .month-box[_ngcontent-%COMP%]{display:inline-block;width:100%;padding-bottom:1em}[_nghost-%COMP%]   #month-0[_ngcontent-%COMP%]{padding-top:1rem}[_nghost-%COMP%]   .month-title[_ngcontent-%COMP%]{padding-left:1rem;text-align:left;color:#363749}[_nghost-%COMP%]   h4[_ngcontent-%COMP%]{font-weight:400;font-size:1.1rem;display:block;text-align:center;margin:1rem 0 0;color:#929292}body[data-dark-mode=true]   [_nghost-%COMP%]   .month-title[_ngcontent-%COMP%]{color:#fff}body[data-dark-mode=true]   [_nghost-%COMP%]   .dates-toolbar[_ngcontent-%COMP%]{color:#fff}.calendar-demand-indicator-container[_ngcontent-%COMP%]{justify-content:center;background-color:var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7))}.calendar-demand-indicator[_ngcontent-%COMP%]{padding:.25rem;margin:auto .25rem;border-radius:5px}.calendar-demand-indicator-cheaper[_ngcontent-%COMP%]{background-color:#6cd395}.calendar-demand-indicator-average[_ngcontent-%COMP%]{background-color:#f2c666}.calendar-demand-indicator-higher[_ngcontent-%COMP%]{background-color:#f58787}.loading-container[_ngcontent-%COMP%]{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.loading-indicator[_ngcontent-%COMP%]{width:5rem;height:5rem}"] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarModal, deps: [{ token: i0.Renderer2 }, { token: i0.ElementRef }, { token: i1$1.ModalController }, { token: i0.ChangeDetectorRef }, { token: CalendarService }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: CalendarModal, selector: "ion-calendar-modal", inputs: { options: "options" }, host: { properties: { "class.ion-page": "this.ionPage" } }, viewQueries: [{ propertyName: "content", first: true, predicate: IonContent, descendants: true, static: true }, { propertyName: "monthsEle", first: true, predicate: ["months"], descendants: true, static: true }], ngImport: i0, template: `
+    <ion-header>
+      <ion-toolbar>
+          <ion-buttons slot="secondary">
+              <ion-button type='button' slot="icon-only" fill="clear" class="primary" (click)="onCancel()">
+              <span *ngIf="_d.closeLabel !== '' && !_d.closeIcon">{{ _d.closeLabel }}</span>
+              <ion-icon *ngIf="_d.closeIcon" name="close"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
+          <ion-title>{{ _d.title }}</ion-title>
+      </ion-toolbar>
+
+      <ng-content select="[sub-header]"></ng-content>
+
+      <ion-row *ngIf="_d.pickMode === 'range'" lines="none" [class]="'dates-toolbar'" no-border>
+        <ion-col size="4" class="start-date ion-text-nowrap">
+          {{ _getDayFormatted(datesTemp[0]) || 'Start Date' }}
+        </ion-col>
+        <ion-col size="4" class="ion-text-center">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-col>
+        <ion-col size="4" class="end-date ion-text-right ion-text-nowrap">
+          {{ _getDayFormatted(datesTemp[1]) || 'End Date' }}
+        </ion-col>
+      </ion-row>
+
+      <ion-calendar-week
+        [color]="_d.color"
+        [weekArray]="_d.weekdays"
+        [weekStart]="_d.weekStart">
+      </ion-calendar-week>
+
+    </ion-header>
+
+    <ion-content (ionScroll)="onScroll($event)" class="calendar-page" [scrollEvents]="true"
+                 [ngClass]="{'multi-selection': _d.pickMode === 'multi'}">
+
+      <div #months>
+        <ng-template ngFor let-month [ngForOf]="calendarMonths" [ngForTrackBy]="trackByIndex" let-i="index">
+          <div class="month-box" [attr.id]="'month-' + i">
+            <h4 class="month-title">{{ _monthFormat(month.original?.date) }}</h4>
+            <ion-calendar-month [month]="month"
+                                [pickMode]="_d.pickMode"
+                                [isSaveHistory]="_d.isSaveHistory"
+                                [id]="_d.id"
+                                [color]="_d.color"
+                                [maxMultiDates]="_d.maxMultiDates"
+                                (change)="onChange($event)"
+                                [(ngModel)]="datesTemp">
+            </ion-calendar-month>
+          </div>
+        </ng-template>
+
+      </div>
+
+      <ion-infinite-scroll threshold="25%" (ionInfinite)="nextMonth($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+
+    </ion-content>
+
+    <ion-footer>
+
+        <ion-button expand="full" *ngIf="!_d.autoDone" [disabled]="!canDone()" (click)="done()">
+          <span *ngIf="_d.doneLabel !== '' && !_d.doneIcon">{{ _d.doneLabel }}</span>
+          <ion-icon *ngIf="_d.doneIcon" name="checkmark"></ion-icon>
+        </ion-button>
+
+    </ion-footer>
+  `, isInline: true, styles: [":host ion-select{max-width:unset}:host ion-select .select-icon>.select-icon-inner,:host ion-select .select-text{color:#fff!important}:host ion-select.select-ios{max-width:unset}:host ion-toolbar ion-button.md{color:var(--ion-color-primary)}:host .dates-toolbar{--background: transparent;padding:0 1rem}:host .dates-toolbar.primary{--background: var(--ion-color-primary)}:host .dates-toolbar.secondary{--background: var(--ion-color-secondary)}:host .dates-toolbar.danger{--background: var(--ion-color-danger)}:host .dates-toolbar.dark{--background: var(--ion-color-dark)}:host .dates-toolbar.light{--background: var(--ion-color-light)}:host .dates-toolbar.transparent{--background: transparent}:host .dates-toolbar.toolbar-md{min-height:44px}:host .ios.dates-toolbar{padding-top:1rem}:host .start-date{padding-left:.5rem}:host .end-date{margin-right:-.5rem}:host .calendar-page{background-color:#fbfbfb}:host .month-box{display:inline-block;width:100%;padding-bottom:1em}:host #month-0{padding-top:1rem}:host .month-title{padding-left:1rem;text-align:left;color:#363749}:host h4{font-weight:400;font-size:1.1rem;display:block;text-align:center;margin:1rem 0 0;color:#929292}body[data-dark-mode=true] :host .month-title{color:#fff}body[data-dark-mode=true] :host .dates-toolbar{color:#fff}.calendar-demand-indicator-container{justify-content:center;background-color:var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7))}.calendar-demand-indicator{padding:.25rem;margin:auto .25rem;border-radius:5px}.calendar-demand-indicator-cheaper{background-color:#6cd395}.calendar-demand-indicator-average{background-color:#f2c666}.calendar-demand-indicator-higher{background-color:#f58787}.loading-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.loading-indicator{width:5rem;height:5rem}\n"], dependencies: [{ kind: "directive", type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i1$1.IonButton, selector: "ion-button", inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "form", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] }, { kind: "component", type: i1$1.IonButtons, selector: "ion-buttons", inputs: ["collapse"] }, { kind: "component", type: i1$1.IonCol, selector: "ion-col", inputs: ["offset", "offsetLg", "offsetMd", "offsetSm", "offsetXl", "offsetXs", "pull", "pullLg", "pullMd", "pullSm", "pullXl", "pullXs", "push", "pushLg", "pushMd", "pushSm", "pushXl", "pushXs", "size", "sizeLg", "sizeMd", "sizeSm", "sizeXl", "sizeXs"] }, { kind: "component", type: i1$1.IonContent, selector: "ion-content", inputs: ["color", "forceOverscroll", "fullscreen", "scrollEvents", "scrollX", "scrollY"] }, { kind: "component", type: i1$1.IonFooter, selector: "ion-footer", inputs: ["collapse", "mode", "translucent"] }, { kind: "component", type: i1$1.IonHeader, selector: "ion-header", inputs: ["collapse", "mode", "translucent"] }, { kind: "component", type: i1$1.IonIcon, selector: "ion-icon", inputs: ["color", "flipRtl", "icon", "ios", "lazy", "md", "mode", "name", "sanitize", "size", "src"] }, { kind: "component", type: i1$1.IonInfiniteScroll, selector: "ion-infinite-scroll", inputs: ["disabled", "position", "threshold"] }, { kind: "component", type: i1$1.IonInfiniteScrollContent, selector: "ion-infinite-scroll-content", inputs: ["loadingSpinner", "loadingText"] }, { kind: "component", type: i1$1.IonRow, selector: "ion-row" }, { kind: "component", type: i1$1.IonTitle, selector: "ion-title", inputs: ["color", "size"] }, { kind: "component", type: i1$1.IonToolbar, selector: "ion-toolbar", inputs: ["color", "mode"] }, { kind: "directive", type: i4.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i4.NgModel, selector: "[ngModel]:not([formControlName]):not([formControl])", inputs: ["name", "disabled", "ngModel", "ngModelOptions"], outputs: ["ngModelChange"], exportAs: ["ngModel"] }, { kind: "component", type: CalendarWeekComponent, selector: "ion-calendar-week", inputs: ["color", "weekArray", "weekStart"] }, { kind: "component", type: MonthComponent, selector: "ion-calendar-month", inputs: ["month", "pickMode", "isSaveHistory", "id", "readonly", "color", "maxMultiDates"], outputs: ["change", "select", "selectStart", "selectEnd"] }] }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarModal, [{
-        type: Component,
-        args: [{ selector: 'ion-calendar-modal', template: `
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarModal, decorators: [{
+            type: Component,
+            args: [{ selector: 'ion-calendar-modal', template: `
     <ion-header>
       <ion-toolbar>
           <ion-buttons slot="secondary">
@@ -1107,37 +970,19 @@ class CalendarModal {
 
     </ion-footer>
   `, styles: [":host ion-select{max-width:unset}:host ion-select .select-icon>.select-icon-inner,:host ion-select .select-text{color:#fff!important}:host ion-select.select-ios{max-width:unset}:host ion-toolbar ion-button.md{color:var(--ion-color-primary)}:host .dates-toolbar{--background: transparent;padding:0 1rem}:host .dates-toolbar.primary{--background: var(--ion-color-primary)}:host .dates-toolbar.secondary{--background: var(--ion-color-secondary)}:host .dates-toolbar.danger{--background: var(--ion-color-danger)}:host .dates-toolbar.dark{--background: var(--ion-color-dark)}:host .dates-toolbar.light{--background: var(--ion-color-light)}:host .dates-toolbar.transparent{--background: transparent}:host .dates-toolbar.toolbar-md{min-height:44px}:host .ios.dates-toolbar{padding-top:1rem}:host .start-date{padding-left:.5rem}:host .end-date{margin-right:-.5rem}:host .calendar-page{background-color:#fbfbfb}:host .month-box{display:inline-block;width:100%;padding-bottom:1em}:host #month-0{padding-top:1rem}:host .month-title{padding-left:1rem;text-align:left;color:#363749}:host h4{font-weight:400;font-size:1.1rem;display:block;text-align:center;margin:1rem 0 0;color:#929292}body[data-dark-mode=true] :host .month-title{color:#fff}body[data-dark-mode=true] :host .dates-toolbar{color:#fff}.calendar-demand-indicator-container{justify-content:center;background-color:var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7))}.calendar-demand-indicator{padding:.25rem;margin:auto .25rem;border-radius:5px}.calendar-demand-indicator-cheaper{background-color:#6cd395}.calendar-demand-indicator-average{background-color:#f2c666}.calendar-demand-indicator-higher{background-color:#f58787}.loading-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.loading-indicator{width:5rem;height:5rem}\n"] }]
-    }], () => [{ type: i0.Renderer2 }, { type: i0.ElementRef }, { type: i1$1.ModalController }, { type: i0.ChangeDetectorRef }, { type: CalendarService }], { content: [{
-            type: ViewChild,
-            args: [IonContent, { static: true }]
-        }], monthsEle: [{
-            type: ViewChild,
-            args: ['months', { static: true }]
-        }], ionPage: [{
-            type: HostBinding,
-            args: ['class.ion-page']
-        }], options: [{
-            type: Input
-        }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(CalendarModal, { className: "CalendarModal" }); })();
+        }], ctorParameters: () => [{ type: i0.Renderer2 }, { type: i0.ElementRef }, { type: i1$1.ModalController }, { type: i0.ChangeDetectorRef }, { type: CalendarService }], propDecorators: { content: [{
+                type: ViewChild,
+                args: [IonContent, { static: true }]
+            }], monthsEle: [{
+                type: ViewChild,
+                args: ['months', { static: true }]
+            }], ionPage: [{
+                type: HostBinding,
+                args: ['class.ion-page']
+            }], options: [{
+                type: Input
+            }] } });
 
-function MonthPickerComponent_div_1_Template(rf, ctx) { if (rf & 1) {
-    const _r1 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 1)(1, "button", 2);
-    i0.ɵɵpipe(2, "date");
-    i0.ɵɵlistener("click", function MonthPickerComponent_div_1_Template_button_click_1_listener() { const i_r2 = i0.ɵɵrestoreView(_r1).index; const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2._onSelect(i_r2)); });
-    i0.ɵɵtext(3);
-    i0.ɵɵelementEnd()();
-} if (rf & 2) {
-    const item_r4 = ctx.$implicit;
-    const i_r2 = ctx.index;
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵclassProp("this-month", i_r2 === ctx_r2._thisMonth.getMonth() && (ctx_r2.month.original == null ? null : ctx_r2.month.original.year) === ctx_r2._thisMonth.getFullYear());
-    i0.ɵɵadvance();
-    i0.ɵɵattribute("aria-label", i0.ɵɵpipeBind2(2, 4, ctx_r2.getDate(i_r2), ctx_r2.MONTH_FORMAT));
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(item_r4);
-} }
 class MonthPickerComponent {
     set monthFormat(value) {
         if (Array.isArray(value) && value.length === 12) {
@@ -1160,20 +1005,20 @@ class MonthPickerComponent {
     getDate(month) {
         return new Date(this._thisMonth.getFullYear(), month, 1);
     }
-    static { this.ɵfac = function MonthPickerComponent_Factory(t) { return new (t || MonthPickerComponent)(); }; }
-    static { this.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MonthPickerComponent, selectors: [["ion-calendar-month-picker"]], inputs: { month: "month", color: "color", monthFormat: "monthFormat" }, outputs: { select: "select" }, decls: 2, vars: 3, consts: [["class", "month-packer-item", 3, "this-month", 4, "ngFor", "ngForOf"], [1, "month-packer-item"], ["type", "button", 3, "click"]], template: function MonthPickerComponent_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵtemplate(1, MonthPickerComponent_div_1_Template, 4, 7, "div", 0);
-            i0.ɵɵelementEnd();
-        } if (rf & 2) {
-            i0.ɵɵclassMap("month-picker " + ctx.color);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngForOf", ctx._monthFormat);
-        } }, dependencies: [i1.NgForOf, i1.DatePipe], styles: ["[_nghost-%COMP%]   .month-picker[_ngcontent-%COMP%]{margin:20px 0;display:inline-block;width:100%}[_nghost-%COMP%]   .month-packer-item[_ngcontent-%COMP%]{width:25%;box-sizing:border-box;float:left;height:50px;padding:5px}[_nghost-%COMP%]   .month-packer-item[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border-radius:32px;width:100%;height:100%;font-size:.9em;background-color:transparent}[_nghost-%COMP%]   .month-picker.primary[_ngcontent-%COMP%]   .month-packer-item.this-month[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border:1px solid var(--ion-color-primary)}[_nghost-%COMP%]   .month-picker.primary[_ngcontent-%COMP%]   .month-packer-item.active[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background-color:var(--ion-color-primary);color:#fff}[_nghost-%COMP%]   .month-picker.secondary[_ngcontent-%COMP%]   .month-packer-item.this-month[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border:1px solid var(--ion-color-secondary)}[_nghost-%COMP%]   .month-picker.secondary[_ngcontent-%COMP%]   .month-packer-item.active[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background-color:var(--ion-color-secondary);color:#fff}[_nghost-%COMP%]   .month-picker.danger[_ngcontent-%COMP%]   .month-packer-item.this-month[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border:1px solid var(--ion-color-danger)}[_nghost-%COMP%]   .month-picker.danger[_ngcontent-%COMP%]   .month-packer-item.active[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background-color:var(--ion-color-danger);color:#fff}[_nghost-%COMP%]   .month-picker.dark[_ngcontent-%COMP%]   .month-packer-item.this-month[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border:1px solid var(--ion-color-dark)}[_nghost-%COMP%]   .month-picker.dark[_ngcontent-%COMP%]   .month-packer-item.active[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background-color:var(--ion-color-dark);color:#fff}[_nghost-%COMP%]   .month-picker.light[_ngcontent-%COMP%]   .month-packer-item.this-month[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border:1px solid var(--ion-color-light)}[_nghost-%COMP%]   .month-picker.light[_ngcontent-%COMP%]   .month-packer-item.active[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background-color:var(--ion-color-light);color:#9e9e9e}[_nghost-%COMP%]   .month-picker.transparent[_ngcontent-%COMP%]{background-color:transparent}[_nghost-%COMP%]   .month-picker.transparent[_ngcontent-%COMP%]   .month-packer-item.this-month[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border:1px solid var(--ion-color-light)}[_nghost-%COMP%]   .month-picker.transparent[_ngcontent-%COMP%]   .month-packer-item.active[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{background-color:var(--ion-color-light);color:#9e9e9e}[_nghost-%COMP%]   .month-picker.cal-color[_ngcontent-%COMP%]   .month-packer-item.this-month[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{border:1px solid}[_nghost-%COMP%]   .month-picker.cal-color[_ngcontent-%COMP%]   .month-packer-item.active[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{color:#fff}"] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MonthPickerComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: MonthPickerComponent, selector: "ion-calendar-month-picker", inputs: { month: "month", color: "color", monthFormat: "monthFormat" }, outputs: { select: "select" }, ngImport: i0, template: `
+    <div [class]="'month-picker ' + color">
+      <div class="month-packer-item"
+           [class.this-month]=" i === _thisMonth.getMonth() && month.original?.year === _thisMonth.getFullYear()"
+           *ngFor="let item of _monthFormat; let i = index">
+        <button type="button" (click)="_onSelect(i)" [attr.aria-label]="getDate(i) | date:MONTH_FORMAT">{{ item }}</button>
+      </div>
+    </div>
+  `, isInline: true, styles: [":host .month-picker{margin:20px 0;display:inline-block;width:100%}:host .month-packer-item{width:25%;box-sizing:border-box;float:left;height:50px;padding:5px}:host .month-packer-item button{border-radius:32px;width:100%;height:100%;font-size:.9em;background-color:transparent}:host .month-picker.primary .month-packer-item.this-month button{border:1px solid var(--ion-color-primary)}:host .month-picker.primary .month-packer-item.active button{background-color:var(--ion-color-primary);color:#fff}:host .month-picker.secondary .month-packer-item.this-month button{border:1px solid var(--ion-color-secondary)}:host .month-picker.secondary .month-packer-item.active button{background-color:var(--ion-color-secondary);color:#fff}:host .month-picker.danger .month-packer-item.this-month button{border:1px solid var(--ion-color-danger)}:host .month-picker.danger .month-packer-item.active button{background-color:var(--ion-color-danger);color:#fff}:host .month-picker.dark .month-packer-item.this-month button{border:1px solid var(--ion-color-dark)}:host .month-picker.dark .month-packer-item.active button{background-color:var(--ion-color-dark);color:#fff}:host .month-picker.light .month-packer-item.this-month button{border:1px solid var(--ion-color-light)}:host .month-picker.light .month-packer-item.active button{background-color:var(--ion-color-light);color:#9e9e9e}:host .month-picker.transparent{background-color:transparent}:host .month-picker.transparent .month-packer-item.this-month button{border:1px solid var(--ion-color-light)}:host .month-picker.transparent .month-packer-item.active button{background-color:var(--ion-color-light);color:#9e9e9e}:host .month-picker.cal-color .month-packer-item.this-month button{border:1px solid}:host .month-picker.cal-color .month-packer-item.active button{color:#fff}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "pipe", type: i1.DatePipe, name: "date" }] }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MonthPickerComponent, [{
-        type: Component,
-        args: [{ selector: 'ion-calendar-month-picker', template: `
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MonthPickerComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'ion-calendar-month-picker', template: `
     <div [class]="'month-picker ' + color">
       <div class="month-packer-item"
            [class.this-month]=" i === _thisMonth.getMonth() && month.original?.year === _thisMonth.getFullYear()"
@@ -1182,84 +1027,16 @@ class MonthPickerComponent {
       </div>
     </div>
   `, styles: [":host .month-picker{margin:20px 0;display:inline-block;width:100%}:host .month-packer-item{width:25%;box-sizing:border-box;float:left;height:50px;padding:5px}:host .month-packer-item button{border-radius:32px;width:100%;height:100%;font-size:.9em;background-color:transparent}:host .month-picker.primary .month-packer-item.this-month button{border:1px solid var(--ion-color-primary)}:host .month-picker.primary .month-packer-item.active button{background-color:var(--ion-color-primary);color:#fff}:host .month-picker.secondary .month-packer-item.this-month button{border:1px solid var(--ion-color-secondary)}:host .month-picker.secondary .month-packer-item.active button{background-color:var(--ion-color-secondary);color:#fff}:host .month-picker.danger .month-packer-item.this-month button{border:1px solid var(--ion-color-danger)}:host .month-picker.danger .month-packer-item.active button{background-color:var(--ion-color-danger);color:#fff}:host .month-picker.dark .month-packer-item.this-month button{border:1px solid var(--ion-color-dark)}:host .month-picker.dark .month-packer-item.active button{background-color:var(--ion-color-dark);color:#fff}:host .month-picker.light .month-packer-item.this-month button{border:1px solid var(--ion-color-light)}:host .month-picker.light .month-packer-item.active button{background-color:var(--ion-color-light);color:#9e9e9e}:host .month-picker.transparent{background-color:transparent}:host .month-picker.transparent .month-packer-item.this-month button{border:1px solid var(--ion-color-light)}:host .month-picker.transparent .month-packer-item.active button{background-color:var(--ion-color-light);color:#9e9e9e}:host .month-picker.cal-color .month-packer-item.this-month button{border:1px solid}:host .month-picker.cal-color .month-packer-item.active button{color:#fff}\n"] }]
-    }], () => [], { month: [{
-            type: Input
-        }], color: [{
-            type: Input
-        }], select: [{
-            type: Output
-        }], monthFormat: [{
-            type: Input
-        }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(MonthPickerComponent, { className: "MonthPickerComponent" }); })();
+        }], ctorParameters: () => [], propDecorators: { month: [{
+                type: Input
+            }], color: [{
+                type: Input
+            }], select: [{
+                type: Output
+            }], monthFormat: [{
+                type: Input
+            }] } });
 
-const _c0$1 = () => [];
-function CalendarComponent_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    const _r1 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "ion-button", 5);
-    i0.ɵɵpipe(1, "date");
-    i0.ɵɵlistener("click", function CalendarComponent_ng_template_1_Template_ion_button_click_0_listener() { i0.ɵɵrestoreView(_r1); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.switchView()); });
-    i0.ɵɵtext(2);
-    i0.ɵɵelement(3, "ion-icon", 6);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵattribute("aria-label", i0.ɵɵpipeBind2(1, 3, ctx_r1.getDate(ctx_r1.monthOpt == null ? null : ctx_r1.monthOpt.original == null ? null : ctx_r1.monthOpt.original.time), ctx_r1.MONTH_DATE_FORMAT));
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", ctx_r1._monthFormat(ctx_r1.monthOpt.original.time), " ");
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("name", ctx_r1._view === "days" ? "md-arrow-dropdown" : "md-arrow-dropup");
-} }
-function CalendarComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 7);
-    i0.ɵɵpipe(1, "date");
-    i0.ɵɵtext(2);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵattribute("aria-label", i0.ɵɵpipeBind2(1, 2, ctx_r1.getDate(ctx_r1.monthOpt.original.time), ctx_r1.MONTH_DATE_FORMAT));
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", ctx_r1._monthFormat(ctx_r1.monthOpt.original.time), " ");
-} }
-function CalendarComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-    const _r3 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "ion-button", 8);
-    i0.ɵɵlistener("click", function CalendarComponent_ng_template_4_Template_ion_button_click_0_listener() { i0.ɵɵrestoreView(_r3); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.prev()); });
-    i0.ɵɵelement(1, "ion-icon", 9);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(2, "ion-button", 10);
-    i0.ɵɵlistener("click", function CalendarComponent_ng_template_4_Template_ion_button_click_2_listener() { i0.ɵɵrestoreView(_r3); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.next()); });
-    i0.ɵɵelement(3, "ion-icon", 11);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("disabled", !ctx_r1.canBack());
-    i0.ɵɵadvance(2);
-    i0.ɵɵproperty("disabled", !ctx_r1.canNext());
-} }
-function CalendarComponent_ng_template_5_Template(rf, ctx) { if (rf & 1) {
-    const _r4 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelement(0, "ion-calendar-week", 12);
-    i0.ɵɵelementStart(1, "ion-calendar-month", 13);
-    i0.ɵɵtwoWayListener("ngModelChange", function CalendarComponent_ng_template_5_Template_ion_calendar_month_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r1 = i0.ɵɵnextContext(); i0.ɵɵtwoWayBindingSet(ctx_r1._calendarMonthValue, $event) || (ctx_r1._calendarMonthValue = $event); return i0.ɵɵresetView($event); });
-    i0.ɵɵlistener("change", function CalendarComponent_ng_template_5_Template_ion_calendar_month_change_1_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.onChanged($event)); })("swipe", function CalendarComponent_ng_template_5_Template_ion_calendar_month_swipe_1_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.swipeEvent($event)); })("select", function CalendarComponent_ng_template_5_Template_ion_calendar_month_select_1_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.select.emit($event)); })("selectStart", function CalendarComponent_ng_template_5_Template_ion_calendar_month_selectStart_1_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.selectStart.emit($event)); })("selectEnd", function CalendarComponent_ng_template_5_Template_ion_calendar_month_selectEnd_1_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.selectEnd.emit($event)); });
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("weekArray", ctx_r1._d.weekdays)("weekStart", ctx_r1._d.weekStart);
-    i0.ɵɵadvance();
-    i0.ɵɵtwoWayProperty("ngModel", ctx_r1._calendarMonthValue);
-    i0.ɵɵproperty("month", ctx_r1.monthOpt)("readonly", ctx_r1.readonly)("pickMode", ctx_r1._d.pickMode)("color", ctx_r1._d.color);
-} }
-function CalendarComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "ion-calendar-month-picker", 14);
-    i0.ɵɵlistener("select", function CalendarComponent_ng_template_6_Template_ion_calendar_month_picker_select_0_listener($event) { i0.ɵɵrestoreView(_r5); const ctx_r1 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r1.monthOnSelect($event)); });
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("color", ctx_r1._d.color ? ctx_r1._d.color : "")("monthFormat", ctx_r1._options["monthPickerFormat"] && ctx_r1._options["monthPickerFormat"].length > 0 ? ctx_r1._options["monthPickerFormat"] : i0.ɵɵpureFunction0(3, _c0$1))("month", ctx_r1.monthOpt);
-} }
 const ION_CAL_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => CalendarComponent),
@@ -1528,26 +1305,67 @@ class CalendarComponent {
             default:
         }
     }
-    static { this.ɵfac = function CalendarComponent_Factory(t) { return new (t || CalendarComponent)(i0.ɵɵdirectiveInject(CalendarService)); }; }
-    static { this.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CalendarComponent, selectors: [["ion-calendar"]], inputs: { format: "format", type: "type", readonly: "readonly", options: "options" }, outputs: { change: "change", monthChange: "monthChange", select: "select", selectStart: "selectStart", selectEnd: "selectEnd" }, features: [i0.ɵɵProvidersFeature([ION_CAL_VALUE_ACCESSOR])], decls: 8, vars: 5, consts: [["title", ""], ["monthPicker", ""], [1, "title"], [3, "ngIf", "ngIfElse"], [3, "ngIf"], ["type", "button", "fill", "clear", 1, "switch-btn", 3, "click"], [1, "arrow-dropdown", 3, "name"], [1, "switch-btn"], ["type", "button", "fill", "clear", 1, "back", 3, "click", "disabled"], ["slot", "icon-only", "size", "small", "name", "ios-arrow-back"], ["type", "button", "fill", "clear", 1, "forward", 3, "click", "disabled"], ["slot", "icon-only", "size", "small", "name", "ios-arrow-forward"], ["color", "transparent", 3, "weekArray", "weekStart"], [1, "component-mode", 3, "ngModelChange", "change", "swipe", "select", "selectStart", "selectEnd", "ngModel", "month", "readonly", "pickMode", "color"], [3, "select", "color", "monthFormat", "month"]], template: function CalendarComponent_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 2);
-            i0.ɵɵtemplate(1, CalendarComponent_ng_template_1_Template, 4, 6, "ng-template", 3)(2, CalendarComponent_ng_template_2_Template, 3, 5, "ng-template", null, 0, i0.ɵɵtemplateRefExtractor)(4, CalendarComponent_ng_template_4_Template, 4, 2, "ng-template", 4);
-            i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(5, CalendarComponent_ng_template_5_Template, 2, 7, "ng-template", 3)(6, CalendarComponent_ng_template_6_Template, 1, 4, "ng-template", null, 1, i0.ɵɵtemplateRefExtractor);
-        } if (rf & 2) {
-            const title_r6 = i0.ɵɵreference(3);
-            const monthPicker_r7 = i0.ɵɵreference(7);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", ctx._showMonthPicker)("ngIfElse", title_r6);
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("ngIf", ctx._showToggleButtons);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", ctx._view === "days")("ngIfElse", monthPicker_r7);
-        } }, dependencies: [i1.NgIf, i1$1.IonButton, i1$1.IonIcon, i4.NgControlStatus, i4.NgModel, CalendarWeekComponent, MonthComponent, MonthPickerComponent, i1.DatePipe], styles: ["[_nghost-%COMP%]{padding:10px 20px;box-sizing:border-box;display:inline-block;background-color:#fff;width:100%}[_nghost-%COMP%]   .title[_ngcontent-%COMP%]{padding:0 40px;overflow:hidden}[_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .back[_ngcontent-%COMP%], [_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .forward[_ngcontent-%COMP%], [_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .switch-btn[_ngcontent-%COMP%]{display:block;position:relative;float:left;min-height:32px;margin:0;padding:0;--padding-start: 0;--padding-end: 0;font-size:15px}[_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .back[_ngcontent-%COMP%], [_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .forward[_ngcontent-%COMP%]{color:#757575}[_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .back[_ngcontent-%COMP%]{margin-left:-100%;left:-40px;width:40px}[_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .forward[_ngcontent-%COMP%]{margin-left:-40px;right:-40px;width:40px}[_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .switch-btn[_ngcontent-%COMP%]{--margin-top: 0;--margin-bottom: 0;--margin-start: auto;--margin-end: auto;width:100%;text-align:center;line-height:32px;color:#757575}[_nghost-%COMP%]   .title[_ngcontent-%COMP%]   .switch-btn[_ngcontent-%COMP%]   .arrow-dropdown[_ngcontent-%COMP%]{margin-left:5px}[_nghost-%COMP%]   .days.between[_ngcontent-%COMP%]   .days-btn.is-last[_ngcontent-%COMP%], [_nghost-%COMP%]   .days.between[_ngcontent-%COMP%]   .days-btn.is-first[_ngcontent-%COMP%]{border-radius:0}[_nghost-%COMP%]   .component-mode[_ngcontent-%COMP%]   .days.startSelection.is-last-wrap[_ngcontent-%COMP%]:after{border-radius:0}[_nghost-%COMP%]   .component-mode[_ngcontent-%COMP%]   .days.endSelection.is-first-wrap[_ngcontent-%COMP%]:after{border-radius:0}"] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarComponent, deps: [{ token: CalendarService }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: CalendarComponent, selector: "ion-calendar", inputs: { format: "format", type: "type", readonly: "readonly", options: "options" }, outputs: { change: "change", monthChange: "monthChange", select: "select", selectStart: "selectStart", selectEnd: "selectEnd" }, providers: [ION_CAL_VALUE_ACCESSOR], ngImport: i0, template: `
+    <div class="title">
+      <ng-template [ngIf]="_showMonthPicker" [ngIfElse]="title">
+        <ion-button type="button"
+                    fill="clear"
+                    class="switch-btn"
+                    [attr.aria-label]="getDate(monthOpt?.original?.time) | date:MONTH_DATE_FORMAT"
+                    (click)="switchView()">
+          {{ _monthFormat(monthOpt.original.time) }}
+          <ion-icon class="arrow-dropdown"
+                    [name]="_view === 'days' ? 'md-arrow-dropdown' : 'md-arrow-dropup'"></ion-icon>
+        </ion-button>
+      </ng-template>
+      <ng-template #title>
+        <div class="switch-btn"
+             [attr.aria-label]="getDate(monthOpt.original.time) | date:MONTH_DATE_FORMAT">
+          {{ _monthFormat(monthOpt.original.time) }}
+        </div>
+      </ng-template>
+      <ng-template [ngIf]="_showToggleButtons">
+        <ion-button type="button" fill="clear" class="back" [disabled]="!canBack()" (click)="prev()">
+          <ion-icon slot="icon-only" size="small" name="ios-arrow-back"></ion-icon>
+        </ion-button>
+        <ion-button type="button" fill="clear" class="forward" [disabled]="!canNext()" (click)="next()">
+          <ion-icon slot="icon-only" size="small" name="ios-arrow-forward"></ion-icon>
+        </ion-button>
+      </ng-template>
+    </div>
+    <ng-template [ngIf]="_view === 'days'" [ngIfElse]="monthPicker">
+      <ion-calendar-week color="transparent"
+                         [weekArray]="_d.weekdays"
+                         [weekStart]="_d.weekStart">
+      </ion-calendar-week>
+
+      <ion-calendar-month class="component-mode"
+                          [(ngModel)]="_calendarMonthValue"
+                          [month]="monthOpt"
+                          [readonly]="readonly"
+                          (change)="onChanged($event)"
+                          (swipe)="swipeEvent($event)"
+                          (select)="select.emit($event)"
+                          (selectStart)="selectStart.emit($event)"
+                          (selectEnd)="selectEnd.emit($event)"
+                          [pickMode]="_d.pickMode"
+                          [color]="_d.color">
+      </ion-calendar-month>
+    </ng-template>
+
+    <ng-template #monthPicker>
+      <ion-calendar-month-picker [color]="_d.color ? _d.color : ''"
+                                 [monthFormat]="_options['monthPickerFormat'] && _options['monthPickerFormat'].length > 0 ? _options['monthPickerFormat'] : []  "
+                                 (select)="monthOnSelect($event)"
+                                 [month]="monthOpt">
+      </ion-calendar-month-picker>
+    </ng-template>
+  `, isInline: true, styles: [":host{padding:10px 20px;box-sizing:border-box;display:inline-block;background-color:#fff;width:100%}:host .title{padding:0 40px;overflow:hidden}:host .title .back,:host .title .forward,:host .title .switch-btn{display:block;position:relative;float:left;min-height:32px;margin:0;padding:0;--padding-start: 0;--padding-end: 0;font-size:15px}:host .title .back,:host .title .forward{color:#757575}:host .title .back{margin-left:-100%;left:-40px;width:40px}:host .title .forward{margin-left:-40px;right:-40px;width:40px}:host .title .switch-btn{--margin-top: 0;--margin-bottom: 0;--margin-start: auto;--margin-end: auto;width:100%;text-align:center;line-height:32px;color:#757575}:host .title .switch-btn .arrow-dropdown{margin-left:5px}:host .days.between .days-btn.is-last,:host .days.between .days-btn.is-first{border-radius:0}:host .component-mode .days.startSelection.is-last-wrap:after{border-radius:0}:host .component-mode .days.endSelection.is-first-wrap:after{border-radius:0}\n"], dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i1$1.IonButton, selector: "ion-button", inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "form", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] }, { kind: "component", type: i1$1.IonIcon, selector: "ion-icon", inputs: ["color", "flipRtl", "icon", "ios", "lazy", "md", "mode", "name", "sanitize", "size", "src"] }, { kind: "directive", type: i4.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i4.NgModel, selector: "[ngModel]:not([formControlName]):not([formControl])", inputs: ["name", "disabled", "ngModel", "ngModelOptions"], outputs: ["ngModelChange"], exportAs: ["ngModel"] }, { kind: "component", type: CalendarWeekComponent, selector: "ion-calendar-week", inputs: ["color", "weekArray", "weekStart"] }, { kind: "component", type: MonthComponent, selector: "ion-calendar-month", inputs: ["month", "pickMode", "isSaveHistory", "id", "readonly", "color", "maxMultiDates"], outputs: ["change", "select", "selectStart", "selectEnd"] }, { kind: "component", type: MonthPickerComponent, selector: "ion-calendar-month-picker", inputs: ["month", "color", "monthFormat"], outputs: ["select"] }, { kind: "pipe", type: i1.DatePipe, name: "date" }] }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarComponent, [{
-        type: Component,
-        args: [{ selector: 'ion-calendar', providers: [ION_CAL_VALUE_ACCESSOR], template: `
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'ion-calendar', providers: [ION_CAL_VALUE_ACCESSOR], template: `
     <div class="title">
       <ng-template [ngIf]="_showMonthPicker" [ngIfElse]="title">
         <ion-button type="button"
@@ -1603,26 +1421,25 @@ class CalendarComponent {
       </ion-calendar-month-picker>
     </ng-template>
   `, styles: [":host{padding:10px 20px;box-sizing:border-box;display:inline-block;background-color:#fff;width:100%}:host .title{padding:0 40px;overflow:hidden}:host .title .back,:host .title .forward,:host .title .switch-btn{display:block;position:relative;float:left;min-height:32px;margin:0;padding:0;--padding-start: 0;--padding-end: 0;font-size:15px}:host .title .back,:host .title .forward{color:#757575}:host .title .back{margin-left:-100%;left:-40px;width:40px}:host .title .forward{margin-left:-40px;right:-40px;width:40px}:host .title .switch-btn{--margin-top: 0;--margin-bottom: 0;--margin-start: auto;--margin-end: auto;width:100%;text-align:center;line-height:32px;color:#757575}:host .title .switch-btn .arrow-dropdown{margin-left:5px}:host .days.between .days-btn.is-last,:host .days.between .days-btn.is-first{border-radius:0}:host .component-mode .days.startSelection.is-last-wrap:after{border-radius:0}:host .component-mode .days.endSelection.is-first-wrap:after{border-radius:0}\n"] }]
-    }], () => [{ type: CalendarService }], { format: [{
-            type: Input
-        }], type: [{
-            type: Input
-        }], readonly: [{
-            type: Input
-        }], change: [{
-            type: Output
-        }], monthChange: [{
-            type: Output
-        }], select: [{
-            type: Output
-        }], selectStart: [{
-            type: Output
-        }], selectEnd: [{
-            type: Output
-        }], options: [{
-            type: Input
-        }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(CalendarComponent, { className: "CalendarComponent" }); })();
+        }], ctorParameters: () => [{ type: CalendarService }], propDecorators: { format: [{
+                type: Input
+            }], type: [{
+                type: Input
+            }], readonly: [{
+                type: Input
+            }], change: [{
+                type: Output
+            }], monthChange: [{
+                type: Output
+            }], select: [{
+                type: Output
+            }], selectStart: [{
+                type: Output
+            }], selectEnd: [{
+                type: Output
+            }], options: [{
+                type: Input
+            }] } });
 
 class CalendarController {
     constructor(modalCtrl, calSvc) {
@@ -1652,143 +1469,13 @@ class CalendarController {
             });
         });
     }
-    static { this.ɵfac = function CalendarController_Factory(t) { return new (t || CalendarController)(i0.ɵɵinject(i1$1.ModalController), i0.ɵɵinject(CalendarService)); }; }
-    static { this.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: CalendarController, factory: CalendarController.ɵfac }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarController, deps: [{ token: i1$1.ModalController }, { token: CalendarService }], target: i0.ɵɵFactoryTarget.Injectable }); }
+    static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarController }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarController, [{
-        type: Injectable
-    }], () => [{ type: i1$1.ModalController }, { type: CalendarService }], null); })();
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarController, decorators: [{
+            type: Injectable
+        }], ctorParameters: () => [{ type: i1$1.ModalController }, { type: CalendarService }] });
 
-const _c0 = ["months"];
-const _c1 = [[["", "sub-header", ""]]];
-const _c2 = ["[sub-header]"];
-const _c3 = a0 => ({ "multi-selection": a0 });
-function CalendarDemandModal_span_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "span");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(ctx_r0._d == null ? null : ctx_r0._d.closeLabel);
-} }
-function CalendarDemandModal_ion_icon_5_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "ion-icon", 12);
-} }
-function CalendarDemandModal_ion_row_9_ng_template_10_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "ion-content", 20);
-    i0.ɵɵtext(1, "Based on the most frequent searches per day");
-    i0.ɵɵelementEnd();
-} }
-function CalendarDemandModal_ion_row_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "ion-row", 13)(1, "div", 14);
-    i0.ɵɵtext(2);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "div", 15);
-    i0.ɵɵtext(4);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(5, "div", 16);
-    i0.ɵɵtext(6);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(7, "ion-button", 17);
-    i0.ɵɵelement(8, "ion-icon", 18);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(9, "ion-popover", 19);
-    i0.ɵɵtemplate(10, CalendarDemandModal_ion_row_9_ng_template_10_Template, 2, 0, "ng-template");
-    i0.ɵɵelementEnd()();
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", ctx_r0.cheaperText, " ");
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", ctx_r0.averageText, " ");
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", ctx_r0.higherText, " ");
-} }
-function CalendarDemandModal_ion_calendar_week_10_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "ion-calendar-week", 21);
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("color", ctx_r0._d.color)("weekArray", ctx_r0._d.weekdays)("weekStart", ctx_r0._d.weekStart);
-} }
-function CalendarDemandModal_div_12_ng_template_2_Template(rf, ctx) { if (rf & 1) {
-    const _r2 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 23)(1, "h4", 24);
-    i0.ɵɵtext(2);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "ion-calendar-month", 25);
-    i0.ɵɵlistener("change", function CalendarDemandModal_div_12_ng_template_2_Template_ion_calendar_month_change_3_listener($event) { i0.ɵɵrestoreView(_r2); const ctx_r0 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r0.onChange($event)); });
-    i0.ɵɵtwoWayListener("ngModelChange", function CalendarDemandModal_div_12_ng_template_2_Template_ion_calendar_month_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r2); const ctx_r0 = i0.ɵɵnextContext(2); i0.ɵɵtwoWayBindingSet(ctx_r0.datesTemp, $event) || (ctx_r0.datesTemp = $event); return i0.ɵɵresetView($event); });
-    i0.ɵɵelementEnd()();
-} if (rf & 2) {
-    const month_r3 = ctx.$implicit;
-    const i_r4 = ctx.index;
-    const ctx_r0 = i0.ɵɵnextContext(2);
-    i0.ɵɵattribute("id", "month-" + i_r4);
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate(ctx_r0.monthFormat(month_r3.original == null ? null : month_r3.original.date));
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("month", month_r3)("pickMode", ctx_r0._d.pickMode)("isSaveHistory", ctx_r0._d.isSaveHistory)("id", ctx_r0._d.id)("color", ctx_r0._d.color)("maxMultiDates", ctx_r0._d.maxMultiDates);
-    i0.ɵɵtwoWayProperty("ngModel", ctx_r0.datesTemp);
-} }
-function CalendarDemandModal_div_12_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", null, 0);
-    i0.ɵɵtemplate(2, CalendarDemandModal_div_12_ng_template_2_Template, 4, 9, "ng-template", 22);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(2);
-    i0.ɵɵproperty("ngForOf", ctx_r0.calendarMonths)("ngForTrackBy", ctx_r0.trackByIndex);
-} }
-function CalendarDemandModal_div_13_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 26);
-    i0.ɵɵelement(1, "ion-spinner", 27);
-    i0.ɵɵelementEnd();
-} }
-function CalendarDemandModal_ion_row_17_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "ion-row", 28)(1, "ion-col", 29);
-    i0.ɵɵtext(2);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "ion-col", 30);
-    i0.ɵɵelement(4, "ion-icon", 31);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(5, "ion-col", 32);
-    i0.ɵɵtext(6);
-    i0.ɵɵelementEnd()();
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵclassMap("dates-toolbar");
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", ctx_r0.getDayFormatted(ctx_r0.datesTemp[0]) || "Start Date", " ");
-    i0.ɵɵadvance(4);
-    i0.ɵɵtextInterpolate1(" ", ctx_r0.getDayFormatted(ctx_r0.datesTemp[1]) || "End Date", " ");
-} }
-function CalendarDemandModal_ion_button_18_span_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "span");
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext(2);
-    i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(ctx_r0._d == null ? null : ctx_r0._d.doneLabel);
-} }
-function CalendarDemandModal_ion_button_18_ion_icon_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "ion-icon", 35);
-} }
-function CalendarDemandModal_ion_button_18_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "ion-button", 33);
-    i0.ɵɵlistener("click", function CalendarDemandModal_ion_button_18_Template_ion_button_click_0_listener() { i0.ɵɵrestoreView(_r5); const ctx_r0 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r0.done()); });
-    i0.ɵɵtemplate(1, CalendarDemandModal_ion_button_18_span_1_Template, 2, 1, "span", 3)(2, CalendarDemandModal_ion_button_18_ion_icon_2_Template, 1, 0, "ion-icon", 34);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("disabled", !ctx_r0.canDone());
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", (ctx_r0._d == null ? null : ctx_r0._d.doneLabel) !== "" && !(ctx_r0._d == null ? null : ctx_r0._d.doneIcon));
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", ctx_r0._d == null ? null : ctx_r0._d.doneIcon);
-} }
 const NUM_OF_MONTHS_TO_CREATE = 3;
 class CalendarDemandModal {
     constructor(_renderer, _elementRef, modalCtrl, ref, calSvc) {
@@ -2027,64 +1714,100 @@ class CalendarDemandModal {
     trackByIndex(index, momentDate) {
         return momentDate.original ? momentDate.original.time : index;
     }
-    static { this.ɵfac = function CalendarDemandModal_Factory(t) { return new (t || CalendarDemandModal)(i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1$1.ModalController), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(CalendarService)); }; }
-    static { this.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CalendarDemandModal, selectors: [["ion-calendar-demand-modal"]], viewQuery: function CalendarDemandModal_Query(rf, ctx) { if (rf & 1) {
-            i0.ɵɵviewQuery(IonContent, 7);
-            i0.ɵɵviewQuery(_c0, 7);
-        } if (rf & 2) {
-            let _t;
-            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.content = _t.first);
-            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.monthsEle = _t.first);
-        } }, hostVars: 2, hostBindings: function CalendarDemandModal_HostBindings(rf, ctx) { if (rf & 2) {
-            i0.ɵɵclassProp("ion-page", ctx.ionPage);
-        } }, inputs: { options: "options", demandCalendarService: "demandCalendarService", latitude: "latitude", longitude: "longitude", cheaperText: "cheaperText", averageText: "averageText", higherText: "higherText" }, ngContentSelectors: _c2, decls: 19, vars: 13, consts: [["months", ""], ["slot", "secondary"], ["type", "button", "slot", "icon-only", "fill", "clear", 1, "primary", 3, "click"], [4, "ngIf"], ["name", "close", 4, "ngIf"], ["class", "calendar-demand-indicator-container ion-padding-top", 4, "ngIf"], [3, "color", "weekArray", "weekStart", 4, "ngIf"], [1, "calendar-page", 3, "ionScroll", "scrollEvents", "ngClass"], ["class", "loading-container", 4, "ngIf"], ["threshold", "25%", 3, "ionInfinite"], ["lines", "none", "class", "ion-margin-vertical", "no-border", "", 3, "class", 4, "ngIf"], ["expand", "full", 3, "disabled", "click", 4, "ngIf"], ["name", "close"], [1, "calendar-demand-indicator-container", "ion-padding-top"], [1, "calendar-demand-indicator", "calendar-demand-indicator-cheaper"], [1, "calendar-demand-indicator", "calendar-demand-indicator-average"], [1, "calendar-demand-indicator", "calendar-demand-indicator-higher"], ["shape", "round", "fill", "clear", "id", "click-trigger", 1, "ion-no-padding"], ["name", "information-circle-outline"], ["trigger", "click-trigger", "triggerAction", "click"], [1, "ion-padding"], [3, "color", "weekArray", "weekStart"], ["ngFor", "", 3, "ngForOf", "ngForTrackBy"], [1, "month-box"], [1, "month-title"], [3, "change", "ngModelChange", "month", "pickMode", "isSaveHistory", "id", "color", "maxMultiDates", "ngModel"], [1, "loading-container"], ["name", "crescent", "color", "primary", 1, "loading-indicator"], ["lines", "none", "no-border", "", 1, "ion-margin-vertical"], ["size", "4", 1, "start-date", "ion-text-nowrap"], ["size", "4", 1, "ion-text-center"], ["name", "arrow-forward-outline"], ["size", "4", 1, "end-date", "ion-text-right", "ion-text-nowrap"], ["expand", "full", 3, "click", "disabled"], ["name", "checkmark", 4, "ngIf"], ["name", "checkmark"]], template: function CalendarDemandModal_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵprojectionDef(_c1);
-            i0.ɵɵelementStart(0, "ion-header")(1, "ion-toolbar")(2, "ion-buttons", 1)(3, "ion-button", 2);
-            i0.ɵɵlistener("click", function CalendarDemandModal_Template_ion_button_click_3_listener() { return ctx.onCancel(); });
-            i0.ɵɵtemplate(4, CalendarDemandModal_span_4_Template, 2, 1, "span", 3)(5, CalendarDemandModal_ion_icon_5_Template, 1, 0, "ion-icon", 4);
-            i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(6, "ion-title");
-            i0.ɵɵtext(7);
-            i0.ɵɵelementEnd()();
-            i0.ɵɵprojection(8);
-            i0.ɵɵtemplate(9, CalendarDemandModal_ion_row_9_Template, 11, 3, "ion-row", 5)(10, CalendarDemandModal_ion_calendar_week_10_Template, 1, 3, "ion-calendar-week", 6);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(11, "ion-content", 7);
-            i0.ɵɵlistener("ionScroll", function CalendarDemandModal_Template_ion_content_ionScroll_11_listener($event) { return ctx.onScroll($event); });
-            i0.ɵɵtemplate(12, CalendarDemandModal_div_12_Template, 3, 2, "div", 3)(13, CalendarDemandModal_div_13_Template, 2, 0, "div", 8);
-            i0.ɵɵelementStart(14, "ion-infinite-scroll", 9);
-            i0.ɵɵlistener("ionInfinite", function CalendarDemandModal_Template_ion_infinite_scroll_ionInfinite_14_listener($event) { return ctx.nextMonth($event); });
-            i0.ɵɵelement(15, "ion-infinite-scroll-content");
-            i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(16, "ion-footer");
-            i0.ɵɵtemplate(17, CalendarDemandModal_ion_row_17_Template, 7, 4, "ion-row", 10)(18, CalendarDemandModal_ion_button_18_Template, 3, 3, "ion-button", 11);
-            i0.ɵɵelementEnd();
-        } if (rf & 2) {
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("ngIf", (ctx._d == null ? null : ctx._d.closeLabel) !== "" && !(ctx._d == null ? null : ctx._d.closeIcon));
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", ctx._d == null ? null : ctx._d.closeIcon);
-            i0.ɵɵadvance(2);
-            i0.ɵɵtextInterpolate1("", ctx._d == null ? null : ctx._d.title, " ");
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngIf", !ctx.loading);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", ctx._d);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("scrollEvents", true)("ngClass", i0.ɵɵpureFunction1(11, _c3, (ctx._d == null ? null : ctx._d.pickMode) === "multi"));
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", !ctx.loading && ctx._d);
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", ctx.loading);
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("ngIf", (ctx._d == null ? null : ctx._d.pickMode) === "range");
-            i0.ɵɵadvance();
-            i0.ɵɵproperty("ngIf", !(ctx._d == null ? null : ctx._d.autoDone));
-        } }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1$1.IonButton, i1$1.IonButtons, i1$1.IonCol, i1$1.IonContent, i1$1.IonFooter, i1$1.IonHeader, i1$1.IonIcon, i1$1.IonInfiniteScroll, i1$1.IonInfiniteScrollContent, i1$1.IonRow, i1$1.IonSpinner, i1$1.IonTitle, i1$1.IonToolbar, i1$1.IonPopover, i4.NgControlStatus, i4.NgModel, CalendarWeekComponent, MonthComponent], styles: ["[_nghost-%COMP%]   ion-select[_ngcontent-%COMP%]{max-width:unset}[_nghost-%COMP%]   ion-select[_ngcontent-%COMP%]   .select-icon[_ngcontent-%COMP%] > .select-icon-inner[_ngcontent-%COMP%], [_nghost-%COMP%]   ion-select[_ngcontent-%COMP%]   .select-text[_ngcontent-%COMP%]{color:#fff!important}[_nghost-%COMP%]   ion-select.select-ios[_ngcontent-%COMP%]{max-width:unset}[_nghost-%COMP%]   ion-toolbar[_ngcontent-%COMP%]   ion-button.md[_ngcontent-%COMP%]{color:var(--ion-color-primary)}[_nghost-%COMP%]   .dates-toolbar[_ngcontent-%COMP%]{--background: transparent;padding:0 1rem}[_nghost-%COMP%]   .dates-toolbar.primary[_ngcontent-%COMP%]{--background: var(--ion-color-primary)}[_nghost-%COMP%]   .dates-toolbar.secondary[_ngcontent-%COMP%]{--background: var(--ion-color-secondary)}[_nghost-%COMP%]   .dates-toolbar.danger[_ngcontent-%COMP%]{--background: var(--ion-color-danger)}[_nghost-%COMP%]   .dates-toolbar.dark[_ngcontent-%COMP%]{--background: var(--ion-color-dark)}[_nghost-%COMP%]   .dates-toolbar.light[_ngcontent-%COMP%]{--background: var(--ion-color-light)}[_nghost-%COMP%]   .dates-toolbar.transparent[_ngcontent-%COMP%]{--background: transparent}[_nghost-%COMP%]   .dates-toolbar.toolbar-md[_ngcontent-%COMP%]{min-height:44px}[_nghost-%COMP%]   .ios.dates-toolbar[_ngcontent-%COMP%]{padding-top:1rem}[_nghost-%COMP%]   .start-date[_ngcontent-%COMP%]{padding-left:.5rem}[_nghost-%COMP%]   .end-date[_ngcontent-%COMP%]{margin-right:-.5rem}[_nghost-%COMP%]   .calendar-page[_ngcontent-%COMP%]{background-color:#fbfbfb}[_nghost-%COMP%]   .month-box[_ngcontent-%COMP%]{display:inline-block;width:100%;padding-bottom:1em}[_nghost-%COMP%]   #month-0[_ngcontent-%COMP%]{padding-top:1rem}[_nghost-%COMP%]   .month-title[_ngcontent-%COMP%]{padding-left:1rem;text-align:left;color:#363749}[_nghost-%COMP%]   h4[_ngcontent-%COMP%]{font-weight:400;font-size:1.1rem;display:block;text-align:center;margin:1rem 0 0;color:#929292}body[data-dark-mode=true]   [_nghost-%COMP%]   .month-title[_ngcontent-%COMP%]{color:#fff}body[data-dark-mode=true]   [_nghost-%COMP%]   .dates-toolbar[_ngcontent-%COMP%]{color:#fff}.calendar-demand-indicator-container[_ngcontent-%COMP%]{justify-content:center;background-color:var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7))}.calendar-demand-indicator[_ngcontent-%COMP%]{padding:.25rem;margin:auto .25rem;border-radius:5px}.calendar-demand-indicator-cheaper[_ngcontent-%COMP%]{background-color:#6cd395}.calendar-demand-indicator-average[_ngcontent-%COMP%]{background-color:#f2c666}.calendar-demand-indicator-higher[_ngcontent-%COMP%]{background-color:#f58787}.loading-container[_ngcontent-%COMP%]{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.loading-indicator[_ngcontent-%COMP%]{width:5rem;height:5rem}", "[_nghost-%COMP%]   ion-toolbar[_ngcontent-%COMP%]{border:none!important}"] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarDemandModal, deps: [{ token: i0.Renderer2 }, { token: i0.ElementRef }, { token: i1$1.ModalController }, { token: i0.ChangeDetectorRef }, { token: CalendarService }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: CalendarDemandModal, selector: "ion-calendar-demand-modal", inputs: { options: "options", demandCalendarService: "demandCalendarService", latitude: "latitude", longitude: "longitude", cheaperText: "cheaperText", averageText: "averageText", higherText: "higherText" }, host: { properties: { "class.ion-page": "this.ionPage" } }, viewQueries: [{ propertyName: "content", first: true, predicate: IonContent, descendants: true, static: true }, { propertyName: "monthsEle", first: true, predicate: ["months"], descendants: true, static: true }], ngImport: i0, template: `
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="secondary">
+                <ion-button type='button' slot="icon-only" fill="clear" class="primary" (click)="onCancel()">
+                    <span *ngIf="_d?.closeLabel !== '' && !_d?.closeIcon">{{ _d?.closeLabel }}</span>
+                    <ion-icon *ngIf="_d?.closeIcon" name="close"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+            <ion-title>{{ _d?.title }} </ion-title>
+        </ion-toolbar>
+        <ng-content select="[sub-header]"></ng-content>
+        <ion-row class="calendar-demand-indicator-container ion-padding-top" *ngIf="!loading">
+            <div class="calendar-demand-indicator calendar-demand-indicator-cheaper">
+                {{ cheaperText }}
+            </div>
+            <div class="calendar-demand-indicator calendar-demand-indicator-average">
+                {{ averageText }}
+            </div>
+            <div class="calendar-demand-indicator calendar-demand-indicator-higher">
+                {{ higherText }}
+            </div>
+            
+            <ion-button shape="round" fill="clear" id="click-trigger" class="ion-no-padding">
+                <ion-icon name="information-circle-outline"></ion-icon>
+            </ion-button>            
+            <ion-popover trigger="click-trigger" triggerAction="click">
+                <ng-template>
+                    <ion-content class="ion-padding">Based on the most frequent searches per day</ion-content>
+                </ng-template>
+            </ion-popover>
+        </ion-row>
+        <ion-calendar-week *ngIf="_d"
+            [color]="_d.color"
+            [weekArray]="_d.weekdays"
+            [weekStart]="_d.weekStart">
+        </ion-calendar-week>
+    </ion-header>
+
+    <ion-content class="calendar-page"
+        [scrollEvents]="true"
+        [ngClass]="{'multi-selection': _d?.pickMode === 'multi'}"
+        (ionScroll)="onScroll($event)">
+
+        <div #months *ngIf="!loading && _d">
+            <ng-template ngFor let-month [ngForOf]="calendarMonths" [ngForTrackBy]="trackByIndex" let-i="index">
+                <div class="month-box" [attr.id]="'month-' + i">
+                    <h4 class="month-title">{{ monthFormat(month.original?.date) }}</h4>
+                    <ion-calendar-month [month]="month"
+                        [pickMode]="_d.pickMode"
+                        [isSaveHistory]="_d.isSaveHistory"
+                        [id]="_d.id"
+                        [color]="_d.color"
+                        [maxMultiDates]="_d.maxMultiDates"
+                        (change)="onChange($event)"
+                        [(ngModel)]="datesTemp">
+                    </ion-calendar-month>
+                </div>
+            </ng-template>
+        </div>
+
+        <div *ngIf="loading" class="loading-container">
+            <ion-spinner name="crescent" color="primary" class="loading-indicator"></ion-spinner>
+        </div>
+
+        <ion-infinite-scroll threshold="25%" (ionInfinite)="nextMonth($event)">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+    <ion-footer>
+        <ion-row *ngIf="_d?.pickMode === 'range'" lines="none" class="ion-margin-vertical" [class]="'dates-toolbar'" no-border>
+            <ion-col size="4" class="start-date ion-text-nowrap">
+                {{ getDayFormatted(datesTemp[0]) || 'Start Date' }}
+            </ion-col>
+            <ion-col size="4" class="ion-text-center">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="4" class="end-date ion-text-right ion-text-nowrap">
+                {{ getDayFormatted(datesTemp[1]) || 'End Date' }}
+            </ion-col>
+        </ion-row>
+      <ion-button expand="full" *ngIf="!_d?.autoDone" [disabled]="!canDone()" (click)="done()">
+        <span *ngIf="_d?.doneLabel !== '' && !_d?.doneIcon">{{ _d?.doneLabel }}</span>
+        <ion-icon *ngIf="_d?.doneIcon" name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-footer>
+  `, isInline: true, styles: [":host ion-select{max-width:unset}:host ion-select .select-icon>.select-icon-inner,:host ion-select .select-text{color:#fff!important}:host ion-select.select-ios{max-width:unset}:host ion-toolbar ion-button.md{color:var(--ion-color-primary)}:host .dates-toolbar{--background: transparent;padding:0 1rem}:host .dates-toolbar.primary{--background: var(--ion-color-primary)}:host .dates-toolbar.secondary{--background: var(--ion-color-secondary)}:host .dates-toolbar.danger{--background: var(--ion-color-danger)}:host .dates-toolbar.dark{--background: var(--ion-color-dark)}:host .dates-toolbar.light{--background: var(--ion-color-light)}:host .dates-toolbar.transparent{--background: transparent}:host .dates-toolbar.toolbar-md{min-height:44px}:host .ios.dates-toolbar{padding-top:1rem}:host .start-date{padding-left:.5rem}:host .end-date{margin-right:-.5rem}:host .calendar-page{background-color:#fbfbfb}:host .month-box{display:inline-block;width:100%;padding-bottom:1em}:host #month-0{padding-top:1rem}:host .month-title{padding-left:1rem;text-align:left;color:#363749}:host h4{font-weight:400;font-size:1.1rem;display:block;text-align:center;margin:1rem 0 0;color:#929292}body[data-dark-mode=true] :host .month-title{color:#fff}body[data-dark-mode=true] :host .dates-toolbar{color:#fff}.calendar-demand-indicator-container{justify-content:center;background-color:var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7))}.calendar-demand-indicator{padding:.25rem;margin:auto .25rem;border-radius:5px}.calendar-demand-indicator-cheaper{background-color:#6cd395}.calendar-demand-indicator-average{background-color:#f2c666}.calendar-demand-indicator-higher{background-color:#f58787}.loading-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.loading-indicator{width:5rem;height:5rem}\n", ":host ion-toolbar{border:none!important}\n"], dependencies: [{ kind: "directive", type: i1.NgClass, selector: "[ngClass]", inputs: ["class", "ngClass"] }, { kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i1$1.IonButton, selector: "ion-button", inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "form", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] }, { kind: "component", type: i1$1.IonButtons, selector: "ion-buttons", inputs: ["collapse"] }, { kind: "component", type: i1$1.IonCol, selector: "ion-col", inputs: ["offset", "offsetLg", "offsetMd", "offsetSm", "offsetXl", "offsetXs", "pull", "pullLg", "pullMd", "pullSm", "pullXl", "pullXs", "push", "pushLg", "pushMd", "pushSm", "pushXl", "pushXs", "size", "sizeLg", "sizeMd", "sizeSm", "sizeXl", "sizeXs"] }, { kind: "component", type: i1$1.IonContent, selector: "ion-content", inputs: ["color", "forceOverscroll", "fullscreen", "scrollEvents", "scrollX", "scrollY"] }, { kind: "component", type: i1$1.IonFooter, selector: "ion-footer", inputs: ["collapse", "mode", "translucent"] }, { kind: "component", type: i1$1.IonHeader, selector: "ion-header", inputs: ["collapse", "mode", "translucent"] }, { kind: "component", type: i1$1.IonIcon, selector: "ion-icon", inputs: ["color", "flipRtl", "icon", "ios", "lazy", "md", "mode", "name", "sanitize", "size", "src"] }, { kind: "component", type: i1$1.IonInfiniteScroll, selector: "ion-infinite-scroll", inputs: ["disabled", "position", "threshold"] }, { kind: "component", type: i1$1.IonInfiniteScrollContent, selector: "ion-infinite-scroll-content", inputs: ["loadingSpinner", "loadingText"] }, { kind: "component", type: i1$1.IonRow, selector: "ion-row" }, { kind: "component", type: i1$1.IonSpinner, selector: "ion-spinner", inputs: ["color", "duration", "name", "paused"] }, { kind: "component", type: i1$1.IonTitle, selector: "ion-title", inputs: ["color", "size"] }, { kind: "component", type: i1$1.IonToolbar, selector: "ion-toolbar", inputs: ["color", "mode"] }, { kind: "component", type: i1$1.IonPopover, selector: "ion-popover", inputs: ["alignment", "animated", "arrow", "keepContentsMounted", "backdropDismiss", "cssClass", "dismissOnSelect", "enterAnimation", "event", "isOpen", "keyboardClose", "leaveAnimation", "mode", "showBackdrop", "translucent", "trigger", "triggerAction", "reference", "size", "side"] }, { kind: "directive", type: i4.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i4.NgModel, selector: "[ngModel]:not([formControlName]):not([formControl])", inputs: ["name", "disabled", "ngModel", "ngModelOptions"], outputs: ["ngModelChange"], exportAs: ["ngModel"] }, { kind: "component", type: CalendarWeekComponent, selector: "ion-calendar-week", inputs: ["color", "weekArray", "weekStart"] }, { kind: "component", type: MonthComponent, selector: "ion-calendar-month", inputs: ["month", "pickMode", "isSaveHistory", "id", "readonly", "color", "maxMultiDates"], outputs: ["change", "select", "selectStart", "selectEnd"] }] }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarDemandModal, [{
-        type: Component,
-        args: [{ selector: 'ion-calendar-demand-modal', template: `
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarDemandModal, decorators: [{
+            type: Component,
+            args: [{ selector: 'ion-calendar-demand-modal', template: `
     <ion-header>
         <ion-toolbar>
             <ion-buttons slot="secondary">
@@ -2173,31 +1896,30 @@ class CalendarDemandModal {
       </ion-button>
     </ion-footer>
   `, styles: [":host ion-select{max-width:unset}:host ion-select .select-icon>.select-icon-inner,:host ion-select .select-text{color:#fff!important}:host ion-select.select-ios{max-width:unset}:host ion-toolbar ion-button.md{color:var(--ion-color-primary)}:host .dates-toolbar{--background: transparent;padding:0 1rem}:host .dates-toolbar.primary{--background: var(--ion-color-primary)}:host .dates-toolbar.secondary{--background: var(--ion-color-secondary)}:host .dates-toolbar.danger{--background: var(--ion-color-danger)}:host .dates-toolbar.dark{--background: var(--ion-color-dark)}:host .dates-toolbar.light{--background: var(--ion-color-light)}:host .dates-toolbar.transparent{--background: transparent}:host .dates-toolbar.toolbar-md{min-height:44px}:host .ios.dates-toolbar{padding-top:1rem}:host .start-date{padding-left:.5rem}:host .end-date{margin-right:-.5rem}:host .calendar-page{background-color:#fbfbfb}:host .month-box{display:inline-block;width:100%;padding-bottom:1em}:host #month-0{padding-top:1rem}:host .month-title{padding-left:1rem;text-align:left;color:#363749}:host h4{font-weight:400;font-size:1.1rem;display:block;text-align:center;margin:1rem 0 0;color:#929292}body[data-dark-mode=true] :host .month-title{color:#fff}body[data-dark-mode=true] :host .dates-toolbar{color:#fff}.calendar-demand-indicator-container{justify-content:center;background-color:var(--ion-toolbar-background, var(--ion-color-step-50, #f7f7f7))}.calendar-demand-indicator{padding:.25rem;margin:auto .25rem;border-radius:5px}.calendar-demand-indicator-cheaper{background-color:#6cd395}.calendar-demand-indicator-average{background-color:#f2c666}.calendar-demand-indicator-higher{background-color:#f58787}.loading-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.loading-indicator{width:5rem;height:5rem}\n", ":host ion-toolbar{border:none!important}\n"] }]
-    }], () => [{ type: i0.Renderer2 }, { type: i0.ElementRef }, { type: i1$1.ModalController }, { type: i0.ChangeDetectorRef }, { type: CalendarService }], { content: [{
-            type: ViewChild,
-            args: [IonContent, { static: true }]
-        }], monthsEle: [{
-            type: ViewChild,
-            args: ['months', { static: true }]
-        }], ionPage: [{
-            type: HostBinding,
-            args: ['class.ion-page']
-        }], options: [{
-            type: Input
-        }], demandCalendarService: [{
-            type: Input
-        }], latitude: [{
-            type: Input
-        }], longitude: [{
-            type: Input
-        }], cheaperText: [{
-            type: Input
-        }], averageText: [{
-            type: Input
-        }], higherText: [{
-            type: Input
-        }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(CalendarDemandModal, { className: "CalendarDemandModal" }); })();
+        }], ctorParameters: () => [{ type: i0.Renderer2 }, { type: i0.ElementRef }, { type: i1$1.ModalController }, { type: i0.ChangeDetectorRef }, { type: CalendarService }], propDecorators: { content: [{
+                type: ViewChild,
+                args: [IonContent, { static: true }]
+            }], monthsEle: [{
+                type: ViewChild,
+                args: ['months', { static: true }]
+            }], ionPage: [{
+                type: HostBinding,
+                args: ['class.ion-page']
+            }], options: [{
+                type: Input
+            }], demandCalendarService: [{
+                type: Input
+            }], latitude: [{
+                type: Input
+            }], longitude: [{
+                type: Input
+            }], cheaperText: [{
+                type: Input
+            }], averageText: [{
+                type: Input
+            }], higherText: [{
+                type: Input
+            }] } });
 
 const CALENDAR_COMPONENTS = [
     CalendarModal,
@@ -2220,9 +1942,9 @@ class CalendarModule {
             ]
         };
     }
-    static { this.ɵfac = function CalendarModule_Factory(t) { return new (t || CalendarModule)(); }; }
-    static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CalendarModule }); }
-    static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
+    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.3.12", ngImport: i0, type: CalendarModule, declarations: [CalendarModal, CalendarWeekComponent, MonthComponent, CalendarComponent, MonthPickerComponent, CalendarDemandModal], imports: [CommonModule, IonicModule, FormsModule], exports: [CalendarModal, CalendarWeekComponent, MonthComponent, CalendarComponent, MonthPickerComponent, CalendarDemandModal] }); }
+    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarModule, providers: [
             CalendarService,
             {
                 provide: CalendarController,
@@ -2231,24 +1953,23 @@ class CalendarModule {
             },
         ], imports: [CommonModule, IonicModule, FormsModule] }); }
 }
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarModule, [{
-        type: NgModule,
-        args: [{
-                imports: [CommonModule, IonicModule, FormsModule],
-                declarations: CALENDAR_COMPONENTS,
-                exports: CALENDAR_COMPONENTS,
-                providers: [
-                    CalendarService,
-                    {
-                        provide: CalendarController,
-                        useFactory: calendarController,
-                        deps: [ModalController, CalendarService],
-                    },
-                ],
-                schemas: [CUSTOM_ELEMENTS_SCHEMA]
-            }]
-    }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CalendarModule, { declarations: [CalendarModal, CalendarWeekComponent, MonthComponent, CalendarComponent, MonthPickerComponent, CalendarDemandModal], imports: [CommonModule, IonicModule, FormsModule], exports: [CalendarModal, CalendarWeekComponent, MonthComponent, CalendarComponent, MonthPickerComponent, CalendarDemandModal] }); })();
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: CalendarModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    imports: [CommonModule, IonicModule, FormsModule],
+                    declarations: CALENDAR_COMPONENTS,
+                    exports: CALENDAR_COMPONENTS,
+                    providers: [
+                        CalendarService,
+                        {
+                            provide: CalendarController,
+                            useFactory: calendarController,
+                            deps: [ModalController, CalendarService],
+                        },
+                    ],
+                    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+                }]
+        }] });
 
 /*
  * Public API Surface of ion-calendar
